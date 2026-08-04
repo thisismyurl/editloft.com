@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editloft: the Edit Flow alternative for modern WordPress</title>
+  <meta name="description" content="Edit Flow hasn't shipped in years. Editloft rebuilds it for the WordPress block editor and modern WordPress: custom statuses, an editorial calendar, and editorial comments. Free, open source, GPLv2.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://editloft.com/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Editloft">
+  <meta property="og:title" content="Editloft: the Edit Flow alternative for modern WordPress">
+  <meta property="og:description" content="A free, actively maintained fork of Edit Flow, rebuilt for the WordPress block editor and Full Site Editing.">
+  <meta property="og:url" content="https://editloft.com/">
+  <meta property="og:image" content="https://editloft.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Editloft: the Edit Flow alternative for modern WordPress">
+  <meta name="twitter:description" content="A free, actively maintained fork of Edit Flow, rebuilt for the WordPress block editor and Full Site Editing.">
+  <meta name="twitter:image" content="https://editloft.com/assets/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://editloft.com/#website",
+        "url": "https://editloft.com/",
+        "name": "Editloft",
+        "description": "A free, open source editorial workflow plugin for WordPress, a maintained fork of Edit Flow."
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://editloft.com/#software",
+        "name": "Editloft",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "WordPress Plugin",
+        "operatingSystem": "WordPress 6.4+",
+        "softwareVersion": "0.6199.0938",
+        "softwareRequirements": "PHP 7.4+",
+        "license": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "Christopher Ross", "url": "https://thisismyurl.com/" },
+        "downloadUrl": "https://github.com/thisismyurl/editloft",
+        "codeRepository": "https://github.com/thisismyurl/editloft",
+        "description": "Editloft is a maintained fork of Edit Flow, rebuilt for the WordPress block editor and Full Site Editing. It adds custom post statuses, an editorial calendar, editorial comments, editorial metadata, notifications, and an audit trail."
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://editloft.com/#org",
+        "name": "Editloft",
+        "url": "https://editloft.com/",
+        "founder": { "@type": "Person", "name": "Christopher Ross", "url": "https://thisismyurl.com/" },
+        "sameAs": [
+          "https://github.com/thisismyurl/editloft",
+          "https://thisismyurl.com/downloads/editloft/"
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__row">
+      <a class="site-header__brand" href="/"><span class="mark">Editloft</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="/" aria-current="page">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/download/">Download</a></li>
+          <li><a href="/support/">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container stack">
+
+      <section class="hero">
+        <div>
+          <p class="eyebrow hero__eyebrow">Free · open source · GPLv2</p>
+          <h1>The editorial workflow plugin for WordPress teams who outgrew Draft and Published</h1>
+          <p class="hero__lede">WordPress ships with two states for a story: draft and published. A working newsroom lives in the space between them. Editloft puts that space back, with custom statuses, an editorial calendar, and the comments and metadata your team already talks in.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="/download/">Download Editloft</a>
+            <a class="btn btn--secondary" href="/about/">Read the story behind it</a>
+          </div>
+        </div>
+
+        <div>
+          <p class="eyebrow" style="margin-bottom: var(--space-3);">The status pipeline</p>
+          <div style="display:flex; flex-wrap:wrap; gap: var(--space-3);">
+            <span class="pill pill--custom">Pitch</span>
+            <span class="pill pill--native">Draft</span>
+            <span class="pill pill--custom">Needs review</span>
+            <span class="pill pill--custom">Ready</span>
+            <span class="pill pill--native">Published</span>
+          </div>
+          <p style="margin-top: var(--space-4); color: var(--color-text-secondary);">Draft and Published are WordPress’s own. Pitch, Needs review, and Ready are the ones Editloft restores.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="what-heading">
+        <div class="section-head">
+          <p class="eyebrow">What it is</p>
+          <h2 id="what-heading">An editorial layer for WordPress</h2>
+        </div>
+        <p>Editloft adds an editorial layer to WordPress: the states a story moves through, a calendar to see it all in one place, editorial comments that stay separate from reader comments, and metadata your desk actually uses. It is a maintained fork of Edit Flow, the plugin that gave WordPress these ideas in the first place. I kept the editorial thinking and rebuilt the machinery underneath it for the WordPress that exists today.</p>
+      </section>
+
+      <section aria-labelledby="why-heading">
+        <div class="section-head">
+          <p class="eyebrow">Why a successor</p>
+          <h2 id="why-heading">Why Edit Flow needed a successor</h2>
+        </div>
+        <p>Edit Flow was built by Automattic, Mohammad Jangda, and Daniel Bachhuber, and it was good. It gave WordPress custom post statuses, an editorial calendar, a story budget, and editorial comments, and plenty of newsrooms ran on it for years. Its copyright line runs 2009 to 2019, and that span tells the story. It was written for a WordPress that came before the block editor. The platform moved, as platforms do, and the code stayed where it was. None of that is a knock on the people who wrote it. Their work was solid enough that the sensible move was to build on it rather than start over.</p>
+      </section>
+
+      <section aria-labelledby="statuses-heading">
+        <div class="section-head">
+          <p class="eyebrow">Custom post statuses</p>
+          <h2 id="statuses-heading">Five statuses, not two</h2>
+        </div>
+        <p>Out of the box, a post in WordPress is either a draft or published. That is fine for a personal blog and useless for a desk that runs ten stories at once. Where is each one? Who has it? Is it waiting on an editor or waiting on you?</p>
+        <p>Custom statuses answer that. Editloft restores the states a real editorial process moves through: Pitch, then Draft, then Needs review, then Ready, then Published. Think of a busy kitchen. Every order rides a ticket along the rail, from ordered to fired to plated to served, and anyone can glance at the rail and know exactly where every plate stands. Custom statuses do that for your stories. A glance tells you what is pitched, what is being written, what is sitting with an editor, and what is ready to go. Nobody has to ask.</p>
+        <div class="diagram-frame" tabindex="0" role="group" aria-label="Scrollable diagram: the editorial lifecycle Editloft restores">
+          <img src="/assets/diagram-lifecycle.svg" width="1536" height="1024" alt="A horizontal pipeline of five editorial statuses in order: Pitch, Draft, Needs review, Ready, Published. Draft and Published are WordPress's own native statuses, shown outlined. Pitch, Needs review and Ready are the custom statuses Editloft restores, shown solid.">
+        </div>
+      </section>
+
+      <section aria-labelledby="features-heading">
+        <div class="section-head">
+          <p class="eyebrow">What Editloft adds</p>
+          <h2 id="features-heading">The calendar, comments, and metadata your desk already uses</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <p class="card__eyebrow eyebrow">Calendar</p>
+            <h3>Editorial calendar</h3>
+            <p>Your stories laid out by date, so you can see the week or the month at a glance and move things when plans change.</p>
+          </article>
+          <article class="card">
+            <p class="card__eyebrow eyebrow">Comments</p>
+            <h3>Editorial comments</h3>
+            <p>The conversation your team has about a story: notes, questions, and direction, kept on the post and kept apart from the comments your readers leave.</p>
+          </article>
+          <article class="card">
+            <p class="card__eyebrow eyebrow">Metadata</p>
+            <h3>Editorial metadata</h3>
+            <p>The desk-level detail a story carries, the fields your team relies on to keep track of who and what and when.</p>
+          </article>
+          <article class="card">
+            <p class="card__eyebrow eyebrow">Audit trail</p>
+            <h3>Audit trail</h3>
+            <p>Every status change is recorded with who made it and when, so a masthead can answer what happened to a story without guessing.</p>
+          </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="today-heading">
+        <div class="section-head">
+          <p class="eyebrow">Modern WordPress</p>
+          <h2 id="today-heading">Built for the WordPress that exists today</h2>
+        </div>
+        <p>Editloft is written for the current platform: the block editor, Full Site Editing (FSE, WordPress’s system for editing your whole site in blocks), and a supported PHP version. It requires WordPress 6.4 or newer and PHP 7.4 or newer. The point of the rebuild was to sit comfortably inside the editor your team already uses every day, rather than fight it.</p>
+      </section>
+
+      <section aria-labelledby="lineage-heading">
+        <div class="section-head">
+          <p class="eyebrow">Free and open source</p>
+          <h2 id="lineage-heading">Built on Edit Flow, with gratitude</h2>
+        </div>
+        <p>Editloft is free to use and free to read. It is licensed under the GNU General Public License version 2 or later (GPLv2), the same license Edit Flow chose. That license is the reason this plugin can exist: the GPL grants anyone the right to fork the code and carry it forward, and it asks that the original credit travel with it. So it does. Editloft’s plugin header still carries the Jangda, Bachhuber, and Automattic copyright line, with portions copyright 2024 to 2025 Christopher Ross. A fork is a continuation, not a hostile act.</p>
+
+        <div class="diagram-frame" tabindex="0" role="group" aria-label="Scrollable diagram: how a fork continues a project, from Edit Flow to Editloft">
+          <img src="/assets/diagram-lineage.svg" width="1536" height="1024" alt="A timeline showing Edit Flow, built by Mohammad Jangda, Daniel Bachhuber, Automattic and contributors, running from 2009 to 2019, and Editloft, built by Christopher, picking up the same codebase from 2024 to 2026, joined by a single unbroken GPL license rail.">
+        </div>
+
+        <div class="compare-grid" style="margin-top: var(--space-8);">
+          <div class="compare-block compare-block--native">
+            <p class="eyebrow">2009 to 2019</p>
+            <h3>Edit Flow</h3>
+            <p>The original: custom statuses, an editorial calendar, a story budget, and editorial comments for the classic editor, built and maintained by Mohammad Jangda, Daniel Bachhuber, Automattic, and contributors.</p>
+          </div>
+          <div class="compare-block compare-block--custom">
+            <p class="eyebrow">2024 to present</p>
+            <h3>Editloft</h3>
+            <p>The fork: the same editorial discipline, rebuilt for the block editor and Full Site Editing, maintained by Christopher, under the same GPLv2-or-later license.</p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="note-heading">
+        <h2 id="note-heading" class="visually-hidden">A note on Edit Flow compatibility</h2>
+        <div class="callout">
+          <p class="callout__label">If you already run Edit Flow</p>
+          <p>Editloft and Edit Flow manage a lot of the same things, so run one or the other, not both at once. There is no automated import from Edit Flow yet, and a migration guide is planned. The support page has the honest, current details before you make the move.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="cta-heading" class="stack--tight">
+        <div class="section-head">
+          <p class="eyebrow">Get started</p>
+          <h2 id="cta-heading">Your first pitch can be on the calendar in a few minutes</h2>
+        </div>
+        <p>Download Editloft, upload it to your site, and activate it. That is the whole setup.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="/download/">Download Editloft</a>
+          <a class="btn btn--secondary" href="/support/">Read the support guide</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__row">
+      <p class="site-footer__license">Editloft is free software, licensed GPLv2 or later. A maintained fork of Edit Flow, built with gratitude to its original authors.</p>
+      <nav class="site-footer__links" aria-label="Footer">
+        <ul style="display:flex; gap: var(--space-6); flex-wrap: wrap;">
+          <li><a href="/terms/">Terms</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="https://github.com/thisismyurl/editloft">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

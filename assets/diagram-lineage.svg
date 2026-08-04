@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" role="img" aria-labelledby="d2-title d2-desc">
+  <title id="d2-title">How a fork continues a project</title>
+  <desc id="d2-desc">A timeline showing Edit Flow, built by Mohammad Jangda, Daniel Bachhuber, Automattic, and contributors, running from 2009 to 2019, and Editloft, built by Christopher, picking up the same codebase from 2024 to 2026. A single unbroken rail beneath both eras represents the GPL license, which carries the code and its copyright header forward across the five dormant years between them and continues past the present day.</desc>
+
+  <rect x="0" y="0" width="1536" height="1024" fill="#f6f1e6"/>
+
+  <!-- kicker -->
+  <text x="768" y="94" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="22" letter-spacing="4" fill="#b3652a">FORK LINEAGE</text>
+
+  <!-- title -->
+  <text x="768" y="152" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="52" fill="#123456">How a fork continues a project</text>
+
+  <!-- subtitle -->
+  <text x="768" y="196" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="21" fill="#4a5d6e">The GPL rail never breaks. The copyright header rides it the whole way.</text>
+
+  <!-- the rail: GPL license, continuous from 2009 to beyond the present -->
+  <line x1="150" y1="510" x2="1400" y2="510" stroke="#123456" stroke-width="6"/>
+  <polygon points="1420,510 1400,499 1400,521" fill="#123456"/>
+  <text x="150" y="390" font-family="'JetBrains Mono', Consolas, monospace" font-size="20" fill="#b3652a">GPL v2 or later</text>
+  <text x="1420" y="390" text-anchor="end" font-family="'JetBrains Mono', Consolas, monospace" font-size="18" fill="#4a5d6e" font-style="italic">the rail continues</text>
+
+  <!-- era 1: Edit Flow, outlined / muted, matches the "native" treatment in diagram 1 -->
+  <rect x="200" y="410" width="500" height="110" fill="#f6f1e6" stroke="#123456" stroke-width="4"/>
+  <text x="450" y="458" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="40" fill="#123456">Edit Flow</text>
+  <text x="450" y="496" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="23" fill="#123456">2009 &#8211; 2019</text>
+
+  <!-- era 2: Editloft, solid copper, matches the "custom" treatment in diagram 1 -->
+  <rect x="940" y="410" width="440" height="110" fill="#b3652a"/>
+  <text x="1160" y="458" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="40" fill="#f6f1e6">Editloft</text>
+  <text x="1160" y="496" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="23" fill="#f6f1e6">2024 &#8211; 2026</text>
+
+  <!-- year ticks along the rail -->
+  <g stroke="#123456" stroke-width="2">
+    <line x1="200" y1="500" x2="200" y2="520"/>
+    <line x1="700" y1="500" x2="700" y2="520"/>
+    <line x1="940" y1="500" x2="940" y2="520"/>
+    <line x1="1380" y1="500" x2="1380" y2="520"/>
+  </g>
+  <g font-family="'JetBrains Mono', Consolas, monospace" font-size="19" fill="#123456" text-anchor="middle">
+    <text x="200" y="550">2009</text>
+    <text x="700" y="550">2019</text>
+    <text x="940" y="550">2024</text>
+    <text x="1380" y="550">2026</text>
+  </g>
+
+  <!-- the copyright header riding the rail across the dormant years -->
+  <rect x="650" y="493" width="340" height="34" fill="#f6f1e6" stroke="#123456" stroke-width="2"/>
+  <text x="820" y="516" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="16" fill="#123456">copyright header travels with the code</text>
+
+  <!-- author credit lines -->
+  <text x="450" y="605" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="18" fill="#123456">Mohammad Jangda &#183; Daniel Bachhuber &#183; Automattic &amp; contributors</text>
+  <text x="1160" y="605" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="18" fill="#123456">Christopher Ross, current maintainer</text>
+
+  <!-- legend, echoes diagram 1's outlined/copper language -->
+  <g>
+    <rect x="330" y="900" width="36" height="36" fill="#f6f1e6" stroke="#123456" stroke-width="3"/>
+    <text x="382" y="927" font-family="'JetBrains Mono', Consolas, monospace" font-size="23" fill="#123456">Original authorship, 2009&#8211;2019</text>
+
+    <rect x="820" y="900" width="36" height="36" fill="#b3652a"/>
+    <text x="872" y="927" font-family="'JetBrains Mono', Consolas, monospace" font-size="23" fill="#123456">Same license, current fork</text>
+  </g>
+</svg>

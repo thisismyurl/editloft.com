@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" role="img" aria-labelledby="d1-title d1-desc">
+  <title id="d1-title">The editorial lifecycle Editloft restores</title>
+  <desc id="d1-desc">A horizontal pipeline of five editorial statuses in order: Pitch, Draft, Needs review, Ready, Published. Draft and Published, WordPress's own native statuses, are shown as outlined squares. Pitch, Needs review, and Ready, the custom statuses Edit Flow introduced and Editloft restores, are shown as solid copper squares.</desc>
+
+  <rect x="0" y="0" width="1536" height="1024" fill="#f6f1e6"/>
+
+  <!-- kicker -->
+  <text x="768" y="94" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="22" letter-spacing="4" fill="#b3652a">STATUS PIPELINE</text>
+
+  <!-- title -->
+  <text x="768" y="152" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="52" fill="#123456">The editorial lifecycle Editloft restores</text>
+
+  <!-- subtitle -->
+  <text x="768" y="196" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="21" fill="#4a5d6e">Outlined stations are WordPress's own. Solid copper is what custom statuses add.</text>
+
+  <!-- connector rail segments with arrowheads, drawn before squares so squares sit cleanly on top -->
+  <g stroke="#123456" stroke-width="4" fill="none">
+    <line x1="275" y1="560" x2="391" y2="560"/>
+    <line x1="559" y1="560" x2="675" y2="560"/>
+    <line x1="843" y1="560" x2="959" y2="560"/>
+    <line x1="1127" y1="560" x2="1243" y2="560"/>
+  </g>
+  <g fill="#123456">
+    <polygon points="409,560 391,550 391,570"/>
+    <polygon points="693,560 675,550 675,570"/>
+    <polygon points="977,560 959,550 959,570"/>
+    <polygon points="1261,560 1243,550 1243,570"/>
+  </g>
+
+  <!-- station 1: Pitch (custom) -->
+  <rect x="125" y="485" width="150" height="150" fill="#b3652a"/>
+  <text x="200" y="685" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="34" fill="#123456">Pitch</text>
+
+  <!-- station 2: Draft (native) -->
+  <rect x="409" y="485" width="150" height="150" fill="#f6f1e6" stroke="#123456" stroke-width="4"/>
+  <text x="484" y="685" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="34" fill="#123456">Draft</text>
+
+  <!-- station 3: Needs review (custom) -->
+  <rect x="693" y="485" width="150" height="150" fill="#b3652a"/>
+  <text x="768" y="685" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="34" fill="#123456">Needs review</text>
+
+  <!-- station 4: Ready (custom) -->
+  <rect x="977" y="485" width="150" height="150" fill="#b3652a"/>
+  <text x="1052" y="685" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="34" fill="#123456">Ready</text>
+
+  <!-- station 5: Published (native) -->
+  <rect x="1261" y="485" width="150" height="150" fill="#f6f1e6" stroke="#123456" stroke-width="4"/>
+  <text x="1336" y="685" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-size="34" fill="#123456">Published</text>
+
+  <!-- legend -->
+  <g>
+    <rect x="318" y="900" width="36" height="36" fill="#f6f1e6" stroke="#123456" stroke-width="3"/>
+    <text x="370" y="927" font-family="'JetBrains Mono', Consolas, monospace" font-size="23" fill="#123456">WordPress's native statuses</text>
+
+    <rect x="738" y="900" width="36" height="36" fill="#b3652a"/>
+    <text x="790" y="927" font-family="'JetBrains Mono', Consolas, monospace" font-size="23" fill="#123456">Custom statuses Editloft restores</text>
+  </g>
+</svg>

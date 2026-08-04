@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects. Apex (editloft.com) is the canonical host.
+# Send the www host to the apex so there is one canonical origin, no chains.
+https://www.editloft.com/* https://editloft.com/:splat 301!
