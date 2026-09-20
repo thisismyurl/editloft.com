@@ -29,6 +29,12 @@
 /assets/diagram-lineage.svg
   Cache-Control: public, max-age=86400, must-revalidate
 
+/assets/screenshot-calendar.webp
+  Cache-Control: public, max-age=86400, must-revalidate
+
+/assets/screenshot-audit-trail.webp
+  Cache-Control: public, max-age=86400, must-revalidate
+
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
   Access-Control-Allow-Origin: *

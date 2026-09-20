@@ -1384,6 +1384,13 @@
 
   .page-hero__meta { margin-top: var(--space-6); font-size: var(--text--1); color: var(--color-text-secondary); max-width: none; }
 
+  .shot { margin: 0; background: var(--color-bg-elevated); border: 1px solid var(--color-border); box-shadow: var(--shadow-lg); border-radius: var(--radius-md); overflow: hidden; }
+  .shot img { width: 100%; height: auto; display: block; }
+  .shot__caption { padding: var(--space-3) var(--space-4); border-top: 1px solid var(--color-border); font-size: var(--text--1); color: var(--color-text-secondary); }
+
+  .feature-row > * { min-width: 0; }
+  .code-block { overflow-x: auto; max-width: 100%; }
+
   @media print {
     .site-header, .site-footer, .cta-band, .toc { display: none; }
   }
