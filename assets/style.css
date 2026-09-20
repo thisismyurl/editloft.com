@@ -1379,6 +1379,9 @@
   .site-nav ul { list-style: none; margin: 0; padding: 0; }
   .hero--home h1 { font-size: clamp(2.5rem, 1.9rem + 2.4vw, 3.75rem); }
 
+  .site-social { margin-top: var(--space-8); max-width: none; font-size: var(--text--1); color: var(--color-text-secondary); }
+  .site-social a { display: inline-block; padding-block: var(--space-1); }
+
   @media print {
     .site-header, .site-footer, .cta-band, .toc { display: none; }
   }
