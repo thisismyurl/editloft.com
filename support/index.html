@@ -3,65 +3,128 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Editloft support: FAQ, bug reports, and migration</title>
-  <meta name="description" content="Get help with Editloft: frequently asked questions, how to report a bug on GitHub (with a plain path for newcomers), and what to know about migrating from Edit Flow.">
+  <title>Editloft support: FAQ, migration and how to report a bug</title>
+  <meta name="description" content="Answers about Editloft: what modules it has, requirements, moving from Edit Flow, and how to report a bug or request a feature on GitHub.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://editloft.com/support/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Editloft">
-  <meta property="og:title" content="Editloft support: FAQ, bug reports, and migration">
-  <meta property="og:description" content="Answers to common Editloft questions, how to report a bug, and what to know about migrating from Edit Flow.">
+  <meta property="og:title" content="Editloft support: FAQ, migration and how to report a bug">
+  <meta property="og:description" content="Answers about Editloft: what modules it has, requirements, moving from Edit Flow, and how to report a bug or request a feature on GitHub.">
   <meta property="og:url" content="https://editloft.com/support/">
   <meta property="og:image" content="https://editloft.com/assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Editloft support: FAQ, bug reports, and migration">
-  <meta name="twitter:description" content="Answers to common Editloft questions, how to report a bug, and what to know about migrating from Edit Flow.">
+  <meta name="twitter:title" content="Editloft support: FAQ, migration and how to report a bug">
+  <meta name="twitter:description" content="Answers about Editloft: what modules it has, requirements, moving from Edit Flow, and how to report a bug or request a feature on GitHub.">
   <meta name="twitter:image" content="https://editloft.com/assets/og-image.png">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Is Editloft a fork of Edit Flow?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Yes. Editloft is a maintained fork of Edit Flow, the editorial plugin built by Automattic, Mohammad Jangda, and Daniel Bachhuber. It keeps Edit Flow's editorial ideas and rebuilds the code underneath for modern WordPress. The original copyright line still rides along in the plugin header, which is how forking under the GPL is supposed to work."}
-          },
-          {
-            "@type": "Question",
-            "name": "Does Editloft have a story budget module?",
-            "acceptedAnswer": {"@type": "Answer", "text": "No, not yet. Edit Flow had one; Editloft does not have it today. The modules that exist right now are custom post statuses, editorial comments, the editorial calendar, editorial metadata, notifications, the dashboard, an audit trail, and settings. Modules are added one at a time, in the open."}
-          },
-          {
-            "@type": "Question",
-            "name": "What WordPress version does Editloft require?",
-            "acceptedAnswer": {"@type": "Answer", "text": "WordPress 6.4 or newer, and PHP 7.4 or newer."}
-          },
-          {
-            "@type": "Question",
-            "name": "Is Editloft free?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Yes. It is free to use and free to read, licensed under the GNU General Public License version 2 or later (GPLv2). The source is public on GitHub."}
-          },
-          {
-            "@type": "Question",
-            "name": "Can I run Editloft and Edit Flow at the same time?",
-            "acceptedAnswer": {"@type": "Answer", "text": "Better not to. The two plugins manage a lot of the same things, custom statuses and editorial data among them, so running both at once means two tools reaching for the same wheel. Run Editloft or run Edit Flow, not both together."}
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://editloft.com/#website",
+      "url": "https://editloft.com/",
+      "name": "Editloft",
+      "description": "A free, open source editorial workflow plugin for WordPress, a maintained fork of Edit Flow."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://editloft.com/#org",
+      "name": "Editloft",
+      "url": "https://editloft.com/",
+      "founder": {
+        "@type": "Person",
+        "name": "Christopher Ross",
+        "url": "https://thisismyurl.com/"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://editloft.com/"},
-          {"@type": "ListItem", "position": 2, "name": "Support", "item": "https://editloft.com/support/"}
-        ]
-      }
-    ]
-  }
+      "sameAs": [
+        "https://github.com/thisismyurl/editloft",
+        "https://thisismyurl.com/downloads/editloft/"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://editloft.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://editloft.com/support/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Editloft a fork of Edit Flow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It is a maintained fork of the editorial plugin built by Automattic, Mohammad Jangda and Daniel Bachhuber."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What modules does it have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Three: an editorial calendar, an audit trail, and status transitions, plus a settings screen that switches each on or off."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What WordPress version does it need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WordPress 6.4 or newer and PHP 7.4 or newer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Editloft free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It is free to use and to read, licensed GPLv2 or later, and the source is public on GitHub."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I run it alongside Edit Flow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Better not to. The two overlap on calendars and status handling, so pick one."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why did a publish from an editor account fail?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "That was a bug in earlier builds, fixed in 0.6263.1854. Editors and administrators can now move a draft to published or scheduled."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does WP-CLI publish behave differently?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WP-CLI and scheduled publishes are never gated by the status rules, because there is no editor to route them through. They are still recorded in the audit trail."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
   <link rel="stylesheet" href="/assets/style.css">
 </head>
@@ -71,123 +134,140 @@
 
   <header class="site-header">
     <div class="container site-header__row">
-      <a class="site-header__brand" href="/"><span class="mark">Editloft</span></a>
-      <nav class="site-nav" aria-label="Primary">
+      <a class="site-header__brand" href="/"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20.5h18M6 20.5V9l6-5 6 5v11.5"/><path d="M10 20.5v-6h4v6"/></svg> Editloft</span></a>
+      <nav class="site-nav site-nav--desktop" aria-label="Primary">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/download/">Download</a></li>
-          <li><a href="/support/" aria-current="page">Support</a></li>
+<li><a href="/features/">Features</a></li>
+<li><a href="/benefits/">Benefits</a></li>
+<li><a href="/compare/edit-flow/">Compare</a></li>
+<li><a href="/changelog/">Changelog</a></li>
+<li><a href="/about/">About</a></li>
+<li><a href="/support/" aria-current="page">Support</a></li>
         </ul>
       </nav>
+      <a class="btn btn--primary site-header__cta" href="/download/">Download free</a>
+      <details class="nav-menu">
+        <summary>Menu</summary>
+        <nav class="nav-menu__panel" aria-label="Primary mobile">
+          <ul>
+            <li><a href="/">Home</a></li>
+<li><a href="/features/">Features</a></li>
+<li><a href="/benefits/">Benefits</a></li>
+<li><a href="/compare/edit-flow/">Compare</a></li>
+<li><a href="/changelog/">Changelog</a></li>
+<li><a href="/about/">About</a></li>
+<li><a href="/support/" aria-current="page">Support</a></li>
+            <li><a href="/download/">Download free</a></li>
+          </ul>
+        </nav>
+      </details>
     </div>
   </header>
 
   <main id="main">
-    <div class="container stack">
-
-      <section class="stack--tight">
+    <div class="page-hero">
+      <div class="container">
+        <ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Support</li></ol>
         <p class="eyebrow">Support</p>
-        <h1>Editloft support</h1>
-        <p class="hero__lede">Editloft is built in the open, so the best place to ask a question, report a problem, or request a feature is where the code lives. If GitHub is unfamiliar territory, there is a gentler front door too. Both are below.</p>
-      </section>
-
-      <section aria-labelledby="faq-heading">
-        <div class="section-head">
-          <p class="eyebrow">Common questions</p>
-          <h2 id="faq-heading">Frequently asked questions</h2>
-        </div>
-        <div class="stack">
-          <div class="stack--tight">
-            <h3>Is Editloft a fork of Edit Flow?</h3>
-            <p>Yes. Editloft is a maintained fork of Edit Flow, the editorial plugin built by Automattic, Mohammad Jangda, and Daniel Bachhuber. It keeps Edit Flow’s editorial ideas and rebuilds the code underneath for modern WordPress. The original copyright line still rides along in the plugin header, which is how forking under the GPL is supposed to work.</p>
-          </div>
-          <div class="stack--tight">
-            <h3>Does Editloft have a story budget module?</h3>
-            <p>No, not yet. Edit Flow had one; Editloft does not have it today. The modules that exist right now are custom post statuses, editorial comments, the editorial calendar, editorial metadata, notifications, the dashboard, an audit trail, and settings. I am adding modules one at a time, in the open, and I would rather be straight about what is missing than imply a completeness that is not there.</p>
-          </div>
-          <div class="stack--tight">
-            <h3>What WordPress version does it require?</h3>
-            <p>WordPress 6.4 or newer, and PHP 7.4 or newer.</p>
-          </div>
-          <div class="stack--tight">
-            <h3>Is Editloft free?</h3>
-            <p>Yes. It is free to use and free to read, licensed under the GNU General Public License version 2 or later (GPLv2). The source is public on GitHub.</p>
-          </div>
-          <div class="stack--tight">
-            <h3>Can I run Editloft and Edit Flow at the same time?</h3>
-            <p>Better not to. The two plugins manage a lot of the same things, custom statuses and editorial data among them, so running both at once means two tools reaching for the same wheel. Pick one. Run Editloft or run Edit Flow, not both together.</p>
-          </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="migrate-heading">
-        <div class="section-head">
-          <p class="eyebrow">Coming from Edit Flow</p>
-          <h2 id="migrate-heading">Migrating from Edit Flow</h2>
-        </div>
-        <p>Here is the honest state of things: there is no automated migration or import tool today. If you are moving from Edit Flow, expect to set up your statuses and workflow in Editloft rather than importing them with one click. For many teams that is a short job, because the statuses you want are the ones you already know.</p>
-        <p>A written migration guide is planned, and it will walk through the move step by step. Until it lands, I would rather tell you the tool does not exist than let you find that out mid-migration. If you are planning a move and want to talk it through, the reach-out options below are open.</p>
-      </section>
-
-      <section aria-labelledby="report-heading">
-        <div class="section-head">
-          <p class="eyebrow">Bugs and features</p>
-          <h2 id="report-heading">Reporting a bug or requesting a feature</h2>
-        </div>
-        <p>Editloft’s bug reports and feature requests all live in one place: the GitHub issue tracker at <a href="https://github.com/thisismyurl/editloft/issues">github.com/thisismyurl/editloft/issues</a>.</p>
-        <p>To file an issue, open that page and select New issue. A good issue saves everyone a round of back-and-forth, so it helps to include:</p>
-        <ul class="stack--tight" style="padding-left: var(--space-6);">
-          <li><strong>What you did</strong>: the steps you took, in order, before the problem showed up.</li>
-          <li><strong>What you expected to happen.</strong></li>
-          <li><strong>What actually happened</strong>, including any error message word for word.</li>
-          <li><strong>Your versions</strong>: WordPress, PHP, and Editloft. All three appear under Tools, then Site Health, then Info, and the Editloft version is on the Plugins screen.</li>
-        </ul>
-        <p style="margin-top: var(--space-4);">You do not have to write it up perfectly. Clear beats polished. The more of the above you can include, the faster I can see what you are seeing.</p>
-      </section>
-
-      <section aria-labelledby="new-heading">
-        <div class="section-head">
-          <p class="eyebrow">Never used GitHub?</p>
-          <h2 id="new-heading">New to GitHub, and finding it intimidating?</h2>
-        </div>
-        <p>If you have never used GitHub, it can look like a wall of code meant for other people. It is not as closed off as it looks. GitHub is simply the public home where Editloft’s code lives and where its to-do list is kept. That to-do list is the issues page, and adding to it is how you tell me something is broken or missing.</p>
-        <p>To file an issue there, you will need a free GitHub account. Once you have one, open <a href="https://github.com/thisismyurl/editloft/issues">github.com/thisismyurl/editloft/issues</a>, select New issue, give it a short title, and describe what happened in plain words. You do not need any technical language. “I clicked Ready and my post disappeared from the calendar” is a genuinely useful bug report.</p>
-        <div class="callout">
-          <p class="callout__label">Prefer not to use GitHub?</p>
-          <p>You do not have to. You can reach me through my own site instead, at the download and story page for Editloft: <a href="https://thisismyurl.com/downloads/editloft/">thisismyurl.com/downloads/editloft/</a>. That is a softer front door, and it reaches the same person.</p>
-        </div>
-      </section>
-
-      <section aria-labelledby="help-heading">
-        <div class="section-head">
-          <p class="eyebrow">In short</p>
-          <h2 id="help-heading">Getting help</h2>
-        </div>
-        <ul class="stack--tight" style="padding-left: var(--space-6);">
-          <li><strong>File a bug or feature request</strong> on the GitHub issue tracker: <a href="https://github.com/thisismyurl/editloft/issues">github.com/thisismyurl/editloft/issues</a>.</li>
-          <li><strong>Prefer not to use GitHub?</strong> Reach me through the Editloft page on my own site: <a href="https://thisismyurl.com/downloads/editloft/">thisismyurl.com/downloads/editloft/</a>.</li>
-        </ul>
-        <p style="margin-top: var(--space-4);">Editloft is maintained by one person in the open, so I read what comes in. A clear description of what you were doing and what went wrong is the most helpful thing you can send.</p>
-        <div class="hero__actions">
-          <a class="btn btn--primary" href="https://thisismyurl.com/downloads/editloft/">Editloft on thisismyurl.com</a>
-          <a class="btn btn--secondary" href="https://github.com/thisismyurl/editloft/issues">Open the issue tracker</a>
-        </div>
-      </section>
-
+        <h1>Help with Editloft</h1>
+        <p class="page-hero__lede">Editloft is built in the open, so the best place to ask a question, report a problem or request a feature is where the code lives. If GitHub is unfamiliar, there is a gentler front door too.</p>
+        <div class="hero__actions"><a class="btn btn--primary btn--lg" href="https://github.com/thisismyurl/editloft/issues">Open the issue tracker</a><a class="btn btn--secondary btn--lg" href="https://thisismyurl.com/downloads/editloft/">Reach me another way</a></div>
+      </div>
     </div>
+    <section class="band" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">Common questions</p><h2 id="faq-heading">Frequently asked questions</h2></div>
+        <div class="faq">
+<details><summary>Is Editloft a fork of Edit Flow?</summary><div class="faq__body"><p>Yes. It is a maintained fork of the editorial plugin built by Automattic, Mohammad Jangda and Daniel Bachhuber. It keeps the editorial ideas and rebuilds the code underneath for modern WordPress. The original copyright line stays in the plugin header, which is how forking under the GPL is meant to work.</p></div></details>
+<details><summary>What modules does it have?</summary><div class="faq__body"><p>Three: an editorial calendar, an audit trail, and status transitions, plus a settings screen that switches each on or off. Custom statuses, editorial comments, editorial metadata, notifications, the dashboard widget and Cloud Sync were retired on 2026-09-20. There is no story budget.</p></div></details>
+<details><summary>What WordPress version does it need?</summary><div class="faq__body"><p>WordPress 6.4 or newer and PHP 7.4 or newer.</p></div></details>
+<details><summary>Is Editloft free?</summary><div class="faq__body"><p>Yes. It is free to use and to read, licensed GPLv2 or later, and the source is public on GitHub.</p></div></details>
+<details><summary>Can I run it alongside Edit Flow?</summary><div class="faq__body"><p>Better not to. The two overlap on calendars and status handling, so pick one.</p></div></details>
+<details><summary>Why did a publish from an editor account fail?</summary><div class="faq__body"><p>That was a bug in earlier builds, fixed in 0.6263.1854. Editors and administrators can now move a draft to published or scheduled. Update to the current release.</p></div></details>
+<details><summary>Why does WP-CLI publish behave differently?</summary><div class="faq__body"><p>WP-CLI and scheduled publishes are never gated by the status rules, because there is no editor to route them through. They are still recorded in the audit trail.</p></div></details>
+</div>
+      </div>
+    </section>
+
+    <section class="band band--elevated">
+      <div class="container two-col">
+        <nav class="toc" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#migrate">Coming from Edit Flow</a></li><li><a href="#report">Reporting a bug</a></li><li><a href="#github">New to GitHub</a></li></ul></nav>
+        <div class="prose">
+          <h2 id="migrate">Coming from Edit Flow</h2>
+          <p>There is no automated migration or import tool. Editloft does not use custom post statuses, editorial comments or editorial metadata, so there is nothing of those to import. Set up the modules you want under Editloft in the admin menu, and read the <a href="/compare/edit-flow/">comparison</a> first to see what you would give up. If you want to talk a move through, the options below are open.</p>
+
+          <h2 id="report">Reporting a bug or requesting a feature</h2>
+          <p>Bug reports and feature requests live on the <a href="https://github.com/thisismyurl/editloft/issues">GitHub issue tracker</a>. A good issue saves a round of back and forth, so please include:</p>
+          <ul>
+            <li>What you did, in order, before the problem showed up</li>
+            <li>What you expected to happen</li>
+            <li>What happened instead, with any error message word for word</li>
+            <li>Your versions of WordPress, PHP and Editloft (Tools, Site Health, Info, and the Plugins screen)</li>
+          </ul>
+          <p>You do not have to write it up perfectly. Clear beats polished.</p>
+
+          <h2 id="github">Never used GitHub?</h2>
+          <p>GitHub is the public home where Editloft's code lives and where its to-do list is kept. That list is the issues page, and adding to it is how you tell me something is broken or missing. You need a free account. Open the issues page, select New issue, give it a short title and describe what happened in plain words. Something like "I dragged a story and it disappeared from the calendar" is a genuinely useful report.</p>
+          <p>Prefer not to use GitHub? Reach me through the <a href="https://thisismyurl.com/downloads/editloft/">Editloft page on my own site</a>. It reaches the same person.</p>
+          <p>Editloft is maintained by one person. I read what comes in, but I cannot promise a response time.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="band band--navy cta-band" aria-labelledby="cta-heading">
+      <div class="container">
+        <p class="eyebrow">Free, open source, GPLv2</p>
+        <h2 id="cta-heading">Ready to try it?</h2>
+        <p>Download the plugin and switch on one module. You can switch it off again from the same screen.</p>
+        <div class="hero__actions">
+          <a class="btn btn--light btn--lg" href="/download/">Download Editloft</a>
+          <a class="btn btn--ghost-light btn--lg" href="/download/">Download</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer">
-    <div class="container site-footer__row">
-      <p class="site-footer__license">Editloft is free software, licensed GPLv2 or later. A maintained fork of Edit Flow, built with gratitude to its original authors.</p>
-      <nav class="site-footer__links" aria-label="Footer">
-        <ul style="display:flex; gap: var(--space-6); flex-wrap: wrap;">
-          <li><a href="/terms/">Terms</a></li>
-          <li><a href="/privacy/">Privacy</a></li>
-          <li><a href="https://github.com/thisismyurl/editloft">GitHub</a></li>
-        </ul>
-      </nav>
+  <footer class="site-footer site-footer--full">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="mark">Editloft</p>
+          <p>Editorial workflow for WordPress: a calendar, an audit trail, and role-based control over who publishes. Free software, GPLv2 or later.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Features</h2>
+          <ul>
+            <li><a href="/features/calendar/">Editorial calendar</a></li>
+            <li><a href="/features/audit-trail/">Audit trail</a></li>
+            <li><a href="/features/status-transitions/">Status transitions</a></li>
+            <li><a href="/features/developers/">For developers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Learn</h2>
+          <ul>
+            <li><a href="/benefits/">Benefits by role</a></li>
+            <li><a href="/compare/edit-flow/">Editloft and Edit Flow</a></li>
+            <li><a href="/changelog/">Changelog</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Get it</h2>
+          <ul>
+            <li><a href="/download/">Download</a></li>
+            <li><a href="/support/">Support</a></li>
+            <li><a href="https://github.com/thisismyurl/editloft">GitHub</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>Editloft is a maintained fork of Edit Flow, built with gratitude to Mohammad Jangda, Daniel Bachhuber, Automattic and every contributor to the original.</p>
+        <p>Made by <a href="https://thisismyurl.com/">Christopher Ross</a></p>
+      </div>
     </div>
   </footer>
 

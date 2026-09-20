@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Terms of use | Editloft</title>
-  <meta name="description" content="Editloft is free software under GPLv2 or later. These terms cover the license, the lack of warranty and use of this website.">
+  <title>Editloft changelog: release history and what changed</title>
+  <meta name="description" content="Dated release notes for Editloft, the maintained Edit Flow fork for WordPress: fixes, additions and retired modules, in plain language.">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://editloft.com/terms/">
+  <link rel="canonical" href="https://editloft.com/changelog/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Editloft">
-  <meta property="og:title" content="Terms of use | Editloft">
-  <meta property="og:description" content="Editloft is free software under GPLv2 or later. These terms cover the license, the lack of warranty and use of this website.">
-  <meta property="og:url" content="https://editloft.com/terms/">
+  <meta property="og:title" content="Editloft changelog: release history and what changed">
+  <meta property="og:description" content="Dated release notes for Editloft, the maintained Edit Flow fork for WordPress: fixes, additions and retired modules, in plain language.">
+  <meta property="og:url" content="https://editloft.com/changelog/">
   <meta property="og:image" content="https://editloft.com/assets/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Terms of use | Editloft">
-  <meta name="twitter:description" content="Editloft is free software under GPLv2 or later. These terms cover the license, the lack of warranty and use of this website.">
+  <meta name="twitter:title" content="Editloft changelog: release history and what changed">
+  <meta name="twitter:description" content="Dated release notes for Editloft, the maintained Edit Flow fork for WordPress: fixes, additions and retired modules, in plain language.">
   <meta name="twitter:image" content="https://editloft.com/assets/og-image.png">
   <script type="application/ld+json">
 {
@@ -57,8 +57,8 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Terms of use",
-          "item": "https://editloft.com/terms/"
+          "name": "Changelog",
+          "item": "https://editloft.com/changelog/"
         }
       ]
     }
@@ -79,7 +79,7 @@
 <li><a href="/features/">Features</a></li>
 <li><a href="/benefits/">Benefits</a></li>
 <li><a href="/compare/edit-flow/">Compare</a></li>
-<li><a href="/changelog/">Changelog</a></li>
+<li><a href="/changelog/" aria-current="page">Changelog</a></li>
 <li><a href="/about/">About</a></li>
 <li><a href="/support/">Support</a></li>
         </ul>
@@ -93,7 +93,7 @@
 <li><a href="/features/">Features</a></li>
 <li><a href="/benefits/">Benefits</a></li>
 <li><a href="/compare/edit-flow/">Compare</a></li>
-<li><a href="/changelog/">Changelog</a></li>
+<li><a href="/changelog/" aria-current="page">Changelog</a></li>
 <li><a href="/about/">About</a></li>
 <li><a href="/support/">Support</a></li>
             <li><a href="/download/">Download free</a></li>
@@ -106,32 +106,37 @@
   <main id="main">
     <div class="page-hero">
       <div class="container">
-        <ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Terms of use</li></ol>
-        <p class="eyebrow">Legal</p>
-        <h1>Terms of use</h1>
-        <p class="page-hero__lede">Editloft is free software. These terms explain the license it is offered under and the limits of what that offer promises. They cover the plugin and this website.</p>
-        
+        <ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Changelog</li></ol>
+        <p class="eyebrow">Changelog</p>
+        <h1>Release history, dated</h1>
+        <p class="page-hero__lede">Every release is tagged and dated. Here are the recent ones in plain language. The complete technical changelog lives in the repository.</p>
+        <div class="hero__actions"><a class="btn btn--primary btn--lg" href="https://github.com/thisismyurl/editloft/blob/main/CHANGELOG.md">Full changelog on GitHub</a><a class="btn btn--secondary btn--lg" href="/download/">Download</a></div>
       </div>
     </div>
-    <section class="band">
+    <section class="band" aria-labelledby="rel-heading">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">Versions</p><h2 id="rel-heading">What changed and why it mattered</h2><p>Versions use the scheme 0.6DDD.HHMM, where DDD is the day of the year and HHMM is the build time.</p></div>
+        <ul class="releases"><li class="release"><div class="release__meta"><strong>0.6263.1854</strong>2026-09-20</div><div><h3>Publishing from an editor account works again</h3><p>Editors and administrators can move a post from draft to published or scheduled without a 403 in the block editor. WP-CLI and scheduled publishes are no longer gated. A new <code>wp editloft audit &lt;post_id&gt;</code> command prints a post's audit trail, and a 22-test PHPUnit suite now runs in CI. The calendar feed link is signed with HMAC-SHA256.</p></div></li><li class="release"><div class="release__meta"><strong>0.6218.1049</strong>2026-08-06</div><div><h3>Saving from the block editor works again</h3><p>A REST filter registered without declaring its second argument ended every block-editor save in a fatal error. Quick Edit was unaffected, which made the bug look selective. It shipped in two earlier builds, so anyone on 0.6194.1016 or 0.6199.0938 should update.</p></div></li><li class="release"><div class="release__meta"><strong>0.6199.0938</strong>2026-07-18</div><div><h3>Calendar entries show their post type icon</h3><p>The calendar grid now draws the icon each post type registered, so a page, a post and a custom type no longer look alike. Dashicons take the colour of the entry they sit in so they stay readable against every status.</p></div></li><li class="release"><div class="release__meta"><strong>0.6194.1016</strong>2026-07-13</div><div><h3>First public release as a standalone fork</h3><p>The unscheduled panel began listing only truly unscheduled posts, and the inbound Cloud Sync webhook that could never fire was disabled. The README and changelog were added.</p></div></li></ul>
+      </div>
+    </section>
+
+    <section class="band band--elevated" aria-labelledby="retire-heading">
       <div class="container">
         <div class="prose">
-          <h2>The license</h2>
-          <p>Editloft is licensed under the GNU General Public License version 2 or later (GPLv2). You are free to use it on as many sites as you like, read its source, modify it and redistribute it, provided you keep it under the same license and keep the existing copyright notices intact. A copy of the license travels with the plugin.</p>
-          <p>Editloft is a maintained fork of Edit Flow. The plugin header keeps the original Edit Flow copyright from Mohammad Jangda, Daniel Bachhuber and Automattic, with portions copyright 2024 to 2026 Christopher Ross. Keeping that lineage visible is part of honouring the license the original authors chose.</p>
+          <h2 id="retire-heading">A note on retired modules</h2>
+          <p>On 2026-09-20 I retired the custom status, editorial comments, editorial metadata, notifications, dashboard and Cloud Sync modules to a <code>legacy</code> folder. They are not loaded and are left out of release downloads. Nobody had put real content behind them on the site that uses Editloft, and unused code is a maintenance and security cost. The rules that used to live in the status module now live in a small standalone Status Transitions module.</p>
+        </div>
+      </div>
+    </section>
 
-          <h2>No warranty</h2>
-          <p>Editloft is provided as is, without warranty of any kind, to the extent permitted by law. It runs on your server and your data, and you use it at your own risk. Back up your site before installing or updating any plugin, Editloft included, and test on a staging copy before you change a live site.</p>
-
-          <h2>Acceptable use</h2>
-          <p>You are responsible for how you run Editloft on your own site, including the content you manage with it and the people you give access to. Nothing here grants any right to the Editloft name or brand beyond what the GPL provides for the code itself. Edit Flow is the name of a separate project and is used on this site only to describe the plugin Editloft was forked from.</p>
-
-          <h2>This website</h2>
-          <p>The information on editloft.com is provided to help you understand and use the plugin. Links to other sites, such as GitHub and thisismyurl.com, are governed by those sites' own terms.</p>
-
-          <h2>Changes to these terms</h2>
-          <p>These terms may change as the project grows, and the updated version will be posted here. Questions can be raised through the <a href="/support/">support page</a>.</p>
-          <p>Last updated 2026-09-20.</p>
+    <section class="band band--navy cta-band" aria-labelledby="cta-heading">
+      <div class="container">
+        <p class="eyebrow">Free, open source, GPLv2</p>
+        <h2 id="cta-heading">Try Editloft on a staging copy of your site</h2>
+        <p>It is free, it takes a minute to install, and you can switch each module off again from one settings screen.</p>
+        <div class="hero__actions">
+          <a class="btn btn--light btn--lg" href="/download/">Download Editloft</a>
+          <a class="btn btn--ghost-light btn--lg" href="/features/">See all features</a>
         </div>
       </div>
     </section>

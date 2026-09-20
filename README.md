@@ -7,23 +7,30 @@ Static HTML, no build step, deployed on Cloudflare Pages. This is also the refer
 ## Structure
 
 ```
-index.html            Home (SEO landing)
-about/index.html      The Edit Flow lineage and why Editloft exists
-download/index.html   Requirements, download, install, version, license
-support/index.html    FAQ, migration, bug reporting, newcomer path
-terms/index.html      Terms of use (GPLv2)
-privacy/index.html    Privacy policy (local-first; Cloud Sync is opt-in)
-404.html              Custom not-found page
+index.html                       Home: hero, stats, features, FAQ, recent releases
+features/index.html              Feature hub, including what is NOT included
+features/calendar/               Editorial calendar
+features/audit-trail/            Audit trail
+features/status-transitions/     Role-based status rules
+features/developers/             REST, WP-CLI, filters, tests
+benefits/index.html              Benefits by role
+compare/edit-flow/               Honest Editloft vs Edit Flow comparison
+changelog/index.html             Recent releases in plain language
+about/  download/  support/      Story, install, FAQ and bug reporting
+terms/  privacy/  404.html
 assets/
-  style.css           The design system (light + dark, theme-aware)
-  fonts/*.woff2        Self-hosted Fraunces, Libre Franklin, JetBrains Mono
-  diagram-*.svg        The editorial-lifecycle and fork-lineage diagrams
-  og-image.png         1200x630 social card
-  favicon.svg, apple-touch-icon.png
-_headers              Cloudflare Pages security + cache headers
-_redirects            www -> apex canonical redirect
-sitemap.xml, robots.txt
+  style.css                      Design system + site layer (light and dark)
+  fonts/*.woff2                  Self-hosted Fraunces, Libre Franklin, JetBrains Mono
+  diagram-lineage.svg            Fork lineage diagram
+  og-image.png, favicon.svg, apple-touch-icon.png
+_headers, _redirects, sitemap.xml, robots.txt
 ```
+
+The layout (sticky header with CTA, split hero, stat strip, icon cards, alternating feature rows, steps, FAQ accordion, closing CTA band, multi-column footer) follows the structure of the ConsultingWP Light block theme, re-skinned with the Editloft tokens in `style.css`. To reuse it for another plugin, swap the PLUGIN-SPECIFIC colour block and the copy.
+
+Copy must match the plugin as shipped. As of 0.6263.1854 that is three modules (calendar, audit trail, status transitions) plus a settings screen. Custom statuses, editorial comments, editorial metadata, notifications, the dashboard widget and Cloud Sync are retired; do not advertise them.
+
+No inline `style=` attributes: the CSP is `style-src 'self'`.
 
 ## Preview locally
 

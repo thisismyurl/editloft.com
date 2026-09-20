@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Editloft for developers: REST, WP-CLI, filters and tests</title>
+  <meta name="description" content="Editloft exposes a read-only REST field, a WP-CLI audit command, three filters and a 22-test PHPUnit suite. Small modules, no hidden state, GPLv2.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://editloft.com/features/developers/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Editloft">
+  <meta property="og:title" content="Editloft for developers: REST, WP-CLI, filters and tests">
+  <meta property="og:description" content="Editloft exposes a read-only REST field, a WP-CLI audit command, three filters and a 22-test PHPUnit suite. Small modules, no hidden state, GPLv2.">
+  <meta property="og:url" content="https://editloft.com/features/developers/">
+  <meta property="og:image" content="https://editloft.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Editloft for developers: REST, WP-CLI, filters and tests">
+  <meta name="twitter:description" content="Editloft exposes a read-only REST field, a WP-CLI audit command, three filters and a 22-test PHPUnit suite. Small modules, no hidden state, GPLv2.">
+  <meta name="twitter:image" content="https://editloft.com/assets/og-image.png">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://editloft.com/#website",
+      "url": "https://editloft.com/",
+      "name": "Editloft",
+      "description": "A free, open source editorial workflow plugin for WordPress, a maintained fork of Edit Flow."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://editloft.com/#org",
+      "name": "Editloft",
+      "url": "https://editloft.com/",
+      "founder": {
+        "@type": "Person",
+        "name": "Christopher Ross",
+        "url": "https://thisismyurl.com/"
+      },
+      "sameAs": [
+        "https://github.com/thisismyurl/editloft",
+        "https://thisismyurl.com/downloads/editloft/"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://editloft.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Features",
+          "item": "https://editloft.com/features/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "For developers",
+          "item": "https://editloft.com/features/developers/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is there a test suite?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A PHPUnit suite of 22 tests covers the transition rules per role, the audit log writes and the calendar's unscheduled test. It runs in CI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is the plugin organised?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each feature is a module under modules/ that registers itself with a small loader. A module that is switched off loads nothing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are the version numbers?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Versions use the scheme 0.6DDD.HHMM, where DDD is the day of the year and HHMM is the build time. The plugin is pre-1.0."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__row">
+      <a class="site-header__brand" href="/"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20.5h18M6 20.5V9l6-5 6 5v11.5"/><path d="M10 20.5v-6h4v6"/></svg> Editloft</span></a>
+      <nav class="site-nav site-nav--desktop" aria-label="Primary">
+        <ul>
+<li><a href="/features/" aria-current="page">Features</a></li>
+<li><a href="/benefits/">Benefits</a></li>
+<li><a href="/compare/edit-flow/">Compare</a></li>
+<li><a href="/changelog/">Changelog</a></li>
+<li><a href="/about/">About</a></li>
+<li><a href="/support/">Support</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--primary site-header__cta" href="/download/">Download free</a>
+      <details class="nav-menu">
+        <summary>Menu</summary>
+        <nav class="nav-menu__panel" aria-label="Primary mobile">
+          <ul>
+            <li><a href="/">Home</a></li>
+<li><a href="/features/" aria-current="page">Features</a></li>
+<li><a href="/benefits/">Benefits</a></li>
+<li><a href="/compare/edit-flow/">Compare</a></li>
+<li><a href="/changelog/">Changelog</a></li>
+<li><a href="/about/">About</a></li>
+<li><a href="/support/">Support</a></li>
+            <li><a href="/download/">Download free</a></li>
+          </ul>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-hero">
+      <div class="container">
+        <ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li><a href="/features/">Features</a></li><li aria-current="page">For developers</li></ol>
+        <p class="eyebrow">For developers</p>
+        <h1>Small modules you can read in an afternoon</h1>
+        <p class="page-hero__lede">Editloft is written so that a developer can see exactly what it does. Each feature is a module, every behaviour that a team might want to change is a filter, and the parts that matter are tested.</p>
+        <div class="hero__actions"><a class="btn btn--primary btn--lg" href="/download/">Download free</a><a class="btn btn--secondary btn--lg" href="/features/">All features</a></div>
+      </div>
+    </div>
+    <section class="band">
+      <div class="container"><div class="feature-row"><div><p class="eyebrow">Script</p><h2>Read history without SQL</h2><p><code>wp editloft audit &lt;post_id&gt;</code> prints a post's audit trail in the same wording the editor shows. The same data is available in the REST API as a read-only field, so a dashboard or a migration script can use it.</p><ul class="tick-list"><li>WP-CLI publishes are never gated, and they are recorded</li><li>REST access follows the post's own edit permission</li></ul></div></div><div class="feature-row feature-row--flip"><div><p class="eyebrow">Extend</p><h2>Filters where a team would want them</h2><p>The transition graph, the calendar capability and the calendar query are all filterable. Change who can publish, who can see the calendar, or which posts the calendar loads, without forking the plugin.</p><ul class="tick-list"><li>A status that is not in the graph is not gated, so extending it is safe</li><li>GPLv2 or later: fork it if a filter is not enough</li></ul></div></div><div class="feature-row"><div><p class="eyebrow">Trust</p><h2>Tested and readable</h2><p>A PHPUnit suite of 22 tests covers the rules per role, the audit writes and the calendar's unscheduled logic, and it runs in CI. The repository is public, issues and pull requests are welcome, and the license and upstream credits are kept intact.</p></div></div></div>
+    </section>
+    <section class="band band--elevated" aria-labelledby="hooks-heading">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">Reference</p><h2 id="hooks-heading">Extension points</h2></div>
+        <div class="table-wrap" tabindex="0" role="region" aria-label="Editloft extension points, scrollable">
+          <table class="compare-table">
+            <caption>Hooks, commands and endpoints</caption>
+            <thead><tr><th scope="col">Name</th><th scope="col">Type</th><th scope="col">What it does</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><code>editloft_status_transition_graph</code></th><td>Filter</td><td>Reshape the allowed status moves per role, or return an empty array to disable enforcement.</td></tr>
+              <tr><th scope="row"><code>editloft_view_calendar_cap</code></th><td>Filter</td><td>Change the capability required to see the calendar.</td></tr>
+              <tr><th scope="row"><code>editloft_rest_calendar_query_args</code></th><td>Filter</td><td>Adjust the query the calendar's REST endpoint runs.</td></tr>
+              <tr><th scope="row"><code>editloft_audit_trail</code></th><td>REST field</td><td>Read-only audit entries on each supported post type, for people who can edit the post.</td></tr>
+              <tr><th scope="row"><code>wp editloft audit &lt;post_id&gt;</code></th><td>WP-CLI</td><td>Print a post's audit trail as plain sentences.</td></tr>
+              <tr><th scope="row"><code>/wp-json/editloft/v1/</code></th><td>REST</td><td>Calendar events and the date-save endpoint the calendar uses.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+    <section class="band" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">Questions</p><h2 id="faq-heading">Common questions</h2></div>
+        <div class="faq">
+<details><summary>Is there a test suite?</summary><div class="faq__body"><p>Yes. A PHPUnit suite of 22 tests covers the transition rules per role, the audit log writes and the calendar's unscheduled test. It runs in CI.</p></div></details>
+<details><summary>How is the plugin organised?</summary><div class="faq__body"><p>Each feature is a module under <code>modules/</code> that registers itself with a small loader. A module that is switched off loads nothing.</p></div></details>
+<details><summary>What are the version numbers?</summary><div class="faq__body"><p>Versions use the scheme 0.6DDD.HHMM, where DDD is the day of the year and HHMM is the build time. The plugin is pre-1.0.</p></div></details>
+</div>
+      </div>
+    </section>
+    <section class="band band--elevated" aria-labelledby="related-heading">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">Keep reading</p><h2 id="related-heading">Other parts of Editloft</h2></div>
+        <div class="card-grid card-grid--3"><a class="card card-link" href="/features/calendar/"><div class="icon-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div><h3>Editorial calendar</h3><p>Plan the week, drag stories between days, subscribe from your own calendar app.</p><span class="card__more">Read more &rarr;</span></a><a class="card card-link" href="/features/audit-trail/"><div class="icon-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1L3.5 8.5"/><path d="M3.5 4v4.5H8M12 7.5V12l3 2"/></svg></div><h3>Audit trail</h3><p>A record of every status change and date move, with the person and the path.</p><span class="card__more">Read more &rarr;</span></a><a class="card card-link" href="/features/status-transitions/"><div class="icon-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.1 8.2-7.5 9.5-4.4-1.3-7.5-5-7.5-9.5V6L12 3z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></div><h3>Status transitions</h3><p>Writers submit, editors publish, and the rules are yours to change.</p><span class="card__more">Read more &rarr;</span></a></div>
+      </div>
+    </section>
+    <section class="band band--navy cta-band" aria-labelledby="cta-heading">
+      <div class="container">
+        <p class="eyebrow">Free, open source, GPLv2</p>
+        <h2 id="cta-heading">Try Editloft on a staging copy of your site</h2>
+        <p>It is free, it takes a minute to install, and you can switch each module off again from one settings screen.</p>
+        <div class="hero__actions">
+          <a class="btn btn--light btn--lg" href="/download/">Download Editloft</a>
+          <a class="btn btn--ghost-light btn--lg" href="/features/">See all features</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer site-footer--full">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="mark">Editloft</p>
+          <p>Editorial workflow for WordPress: a calendar, an audit trail, and role-based control over who publishes. Free software, GPLv2 or later.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Features</h2>
+          <ul>
+            <li><a href="/features/calendar/">Editorial calendar</a></li>
+            <li><a href="/features/audit-trail/">Audit trail</a></li>
+            <li><a href="/features/status-transitions/">Status transitions</a></li>
+            <li><a href="/features/developers/">For developers</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Learn</h2>
+          <ul>
+            <li><a href="/benefits/">Benefits by role</a></li>
+            <li><a href="/compare/edit-flow/">Editloft and Edit Flow</a></li>
+            <li><a href="/changelog/">Changelog</a></li>
+            <li><a href="/about/">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Get it</h2>
+          <ul>
+            <li><a href="/download/">Download</a></li>
+            <li><a href="/support/">Support</a></li>
+            <li><a href="https://github.com/thisismyurl/editloft">GitHub</a></li>
+            <li><a href="/privacy/">Privacy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>Editloft is a maintained fork of Edit Flow, built with gratitude to Mohammad Jangda, Daniel Bachhuber, Automattic and every contributor to the original.</p>
+        <p>Made by <a href="https://thisismyurl.com/">Christopher Ross</a></p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
