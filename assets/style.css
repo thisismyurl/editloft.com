@@ -1351,7 +1351,7 @@
   @media (min-width: 48rem) { .footer-grid { grid-template-columns: 1.6fr repeat(3, 1fr); } }
   .footer-brand .mark { font-family: var(--font-display); font-size: var(--text-2); font-weight: 600; }
   .footer-brand p { margin-top: var(--space-3); font-size: var(--text--1); color: var(--color-text-secondary); }
-  .footer-col h2 {
+  .footer-title {
     font-family: var(--font-mono);
     font-size: var(--text--1);
     font-weight: 500;
@@ -1381,6 +1381,8 @@
 
   .site-social { margin-top: var(--space-8); max-width: none; font-size: var(--text--1); color: var(--color-text-secondary); }
   .site-social a { display: inline-block; padding-block: var(--space-1); }
+
+  .page-hero__meta { margin-top: var(--space-6); font-size: var(--text--1); color: var(--color-text-secondary); max-width: none; }
 
   @media print {
     .site-header, .site-footer, .cta-band, .toc { display: none; }

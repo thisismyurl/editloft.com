@@ -3,22 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Role-based publishing rules for WordPress | Editloft status transitions</title>
-  <meta name="description" content="Control which WordPress roles can move a post between draft, pending, scheduled and published. Writers submit for review, editors publish, and WP-CLI and scheduled publishes are never blocked.">
+  <title>Restrict who can publish in WordPress by role | Editloft</title>
+  <meta name="description" content="Restrict who can publish, schedule or unpublish in WordPress by role. Writers submit for review, editors decide; WP-CLI and scheduled posts are never blocked.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://editloft.com/features/status-transitions/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Editloft">
-  <meta property="og:title" content="Role-based publishing rules for WordPress | Editloft status transitions">
-  <meta property="og:description" content="Control which WordPress roles can move a post between draft, pending, scheduled and published. Writers submit for review, editors publish, and WP-CLI and scheduled publishes are never blocked.">
+  <meta property="og:title" content="Restrict who can publish in WordPress by role | Editloft">
+  <meta property="og:description" content="Restrict who can publish, schedule or unpublish in WordPress by role. Writers submit for review, editors decide; WP-CLI and scheduled posts are never blocked.">
+  <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://editloft.com/features/status-transitions/">
   <meta property="og:image" content="https://editloft.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Editloft: editorial calendar, audit trail and publishing rules for WordPress">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Role-based publishing rules for WordPress | Editloft status transitions">
-  <meta name="twitter:description" content="Control which WordPress roles can move a post between draft, pending, scheduled and published. Writers submit for review, editors publish, and WP-CLI and scheduled publishes are never blocked.">
+  <meta name="twitter:title" content="Restrict who can publish in WordPress by role | Editloft">
+  <meta name="twitter:description" content="Restrict who can publish, schedule or unpublish in WordPress by role. Writers submit for review, editors decide; WP-CLI and scheduled posts are never blocked.">
   <meta name="twitter:image" content="https://editloft.com/assets/og-image.png">
+  <meta name="twitter:image:alt" content="Editloft: editorial calendar, audit trail and publishing rules for WordPress">
+  <link rel="preload" href="/assets/fonts/libre-franklin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/fraunces-variable.woff2" as="font" type="font/woff2" crossorigin>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,13 +35,24 @@
       "@id": "https://editloft.com/#website",
       "url": "https://editloft.com/",
       "name": "Editloft",
-      "description": "A free, open source editorial workflow plugin for WordPress, a maintained fork of Edit Flow."
+      "description": "A free, open source editorial workflow plugin for WordPress, a maintained fork of Edit Flow.",
+      "publisher": {
+        "@id": "https://editloft.com/#org"
+      },
+      "inLanguage": "en"
     },
     {
       "@type": "Organization",
       "@id": "https://editloft.com/#org",
       "name": "Editloft",
       "url": "https://editloft.com/",
+      "description": "Editloft makes a free editorial workflow plugin for WordPress, a maintained fork of Edit Flow.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://editloft.com/assets/apple-touch-icon.png",
+        "width": 180,
+        "height": 180
+      },
       "founder": {
         "@id": "https://thisismyurl.com/about/#person"
       },
@@ -59,6 +77,24 @@
         "https://github.com/thisismyurl",
         "https://profiles.wordpress.org/thisismyurl/"
       ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://editloft.com/features/status-transitions/#webpage",
+      "url": "https://editloft.com/features/status-transitions/",
+      "name": "Restrict who can publish in WordPress by role | Editloft",
+      "isPartOf": {
+        "@id": "https://editloft.com/#website"
+      },
+      "author": {
+        "@id": "https://thisismyurl.com/about/#person"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-09-20",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://editloft.com/assets/og-image.png"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -86,6 +122,14 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I stop authors and contributors publishing posts in WordPress?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WordPress lets an Author publish their own posts, and a Contributor can only submit for review. With Editloft's status transitions on, only editors and administrators can publish, schedule, make private or unpublish. Everyone else can send a draft to pending review, and you can change the roles with a filter."
+          }
+        },
         {
           "@type": "Question",
           "name": "Who can publish by default?",
@@ -136,7 +180,7 @@
         <ul>
 <li><a href="/features/" aria-current="page">Features</a></li>
 <li><a href="/benefits/">Benefits</a></li>
-<li><a href="/compare/edit-flow/">Compare</a></li>
+<li><a href="/compare/edit-flow/">Edit Flow alternative</a></li>
 <li><a href="/changelog/">Changelog</a></li>
 <li><a href="/about/">About</a></li>
 <li><a href="/support/">Support</a></li>
@@ -150,7 +194,7 @@
             <li><a href="/">Home</a></li>
 <li><a href="/features/" aria-current="page">Features</a></li>
 <li><a href="/benefits/">Benefits</a></li>
-<li><a href="/compare/edit-flow/">Compare</a></li>
+<li><a href="/compare/edit-flow/">Edit Flow alternative</a></li>
 <li><a href="/changelog/">Changelog</a></li>
 <li><a href="/about/">About</a></li>
 <li><a href="/support/">Support</a></li>
@@ -166,19 +210,24 @@
       <div class="container">
         <ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li><a href="/features/">Features</a></li><li aria-current="page">Status transitions</li></ol>
         <p class="eyebrow">Status transitions</p>
-        <h1>Writers submit. Editors decide what goes out.</h1>
+        <h1>Restrict who can publish in WordPress: writers submit, editors decide</h1>
         <p class="page-hero__lede">WordPress roles already say who can edit. Status transitions apply that to the moves that matter: review, schedule, publish and unpublish.</p>
         <div class="hero__actions"><a class="btn btn--primary btn--lg" href="/download/">Download free</a><a class="btn btn--secondary btn--lg" href="/features/">All features</a></div>
+        <p class="page-hero__meta">By <a href="https://thisismyurl.com/about/" rel="me">Christopher Ross</a>. Last updated <time datetime="2026-09-20">September 20, 2026</time>.</p>
       </div>
     </div>
     <section class="band">
-      <div class="container"><div class="feature-row"><div><p class="eyebrow">Rules</p><h2>A clear default that matches how desks work</h2><p>Out of the box, anyone who can edit a post can send a draft to pending review, pull it back to draft, or trash unpublished work. Publishing, scheduling, making private and unpublishing are for editors and administrators.</p><ul class="tick-list"><li>Writers keep their flow: draft, then pending review</li><li>Editors publish, schedule and unpublish</li><li>Rules apply to posts and pages by default, and you can extend them to other post types</li></ul></div><div class="graph" role="group" aria-label="Default status transition rules, shown as examples"><div class="graph__row"><span><span class="pill pill--native">Draft</span></span><span class="graph__arrow" aria-hidden="true">&rarr;</span><span class="graph__who"><span class="visually-hidden">to Pending review, allowed for </span><span class="pill pill--custom">Pending review</span> <strong>Anyone</strong> who can edit the post</span></div><div class="graph__row"><span><span class="pill pill--native">Draft</span></span><span class="graph__arrow" aria-hidden="true">&rarr;</span><span class="graph__who"><span class="visually-hidden">to Published, allowed for </span><span class="pill pill--custom">Published</span> <strong>Editors and administrators</strong></span></div><div class="graph__row"><span><span class="pill pill--native">Pending review</span></span><span class="graph__arrow" aria-hidden="true">&rarr;</span><span class="graph__who"><span class="visually-hidden">to Scheduled, allowed for </span><span class="pill pill--custom">Scheduled</span> <strong>Editors and administrators</strong></span></div><div class="graph__row"><span><span class="pill pill--native">Scheduled</span></span><span class="graph__arrow" aria-hidden="true">&rarr;</span><span class="graph__who"><span class="visually-hidden">to Draft, allowed for </span><span class="pill pill--custom">Draft</span> <strong>Editors and administrators</strong></span></div><div class="graph__row"><span><span class="pill pill--native">Published</span></span><span class="graph__arrow" aria-hidden="true">&rarr;</span><span class="graph__who"><span class="visually-hidden">to Draft, allowed for </span><span class="pill pill--custom">Draft</span> <strong>Editors and administrators</strong> only</span></div></div></div><div class="feature-row feature-row--flip"><div><p class="eyebrow">Clarity</p><h2>People see what they can do</h2><p>The block editor stops offering Publish to a role the rules will refuse, so nobody clicks a button that is going to fail. If a blocked move gets through another way, a REST save returns a 403 and the classic editor shows a notice on the next screen.</p><ul class="tick-list"><li>No silent reverts, no mystery errors</li><li>Clear wording: your role cannot move this post from one status to another, ask an editor</li></ul></div></div><div class="feature-row"><div><p class="eyebrow">Flexibility</p><h2>Yours to change, and safe by default</h2><p>Different team, different rules. One filter, <code>editloft_status_transition_graph</code>, lets you reshape the whole graph. A status that is not in the graph is not gated, so adding a custom status never locks anyone out.</p><ul class="tick-list"><li>WP-CLI and scheduled publishes are never blocked</li><li>Every move, allowed or not, is easy to audit alongside the audit trail</li></ul></div></div></div>
+      <div class="container"><div class="feature-row"><div><p class="eyebrow">Rules</p><h2>A clear default that matches how desks work</h2><p>Out of the box, anyone who can edit a post can send a draft to pending review, pull it back to draft, or trash unpublished work. Publishing, scheduling, making private and unpublishing are for editors and administrators.</p><ul class="tick-list"><li>Writers keep their flow: draft, then pending review</li><li>Editors publish, schedule and unpublish</li><li>Rules apply to posts and pages by default, and you can extend them to other post types</li></ul></div><div class="graph" role="group" aria-label="Default status transition rules, shown as examples"><div class="graph__row"><span><span class="pill pill--native">Draft</span></span><span class="graph__arrow" aria-hidden="true">&rarr;</span><span class="graph__who"><span class="visually-hidden">to Pending review, allowed for </span><span class="pill pill--custom">Pending review</span> <strong>Anyone</strong> who can edit the post</span></div><div class="graph__row"><span><span class="pill pill--native">Draft</span></span><span class="graph__arrow" aria-hidden="true">&rarr;</span><span class="graph__who"><span class="visually-hidden">to Published, allowed for </span><span class="pill pill--custom">Published</span> <strong>Editors and administrators</strong></span></div><div class="graph__row"><span><span class="pill pill--native">Pending review</span></span><span class="graph__arrow" aria-hidden="true">&rarr;</span><span class="graph__who"><span class="visually-hidden">to Scheduled, allowed for </span><span class="pill pill--custom">Scheduled</span> <strong>Editors and administrators</strong></span></div><div class="graph__row"><span><span class="pill pill--native">Scheduled</span></span><span class="graph__arrow" aria-hidden="true">&rarr;</span><span class="graph__who"><span class="visually-hidden">to Draft, allowed for </span><span class="pill pill--custom">Draft</span> <strong>Editors and administrators</strong></span></div><div class="graph__row"><span><span class="pill pill--native">Published</span></span><span class="graph__arrow" aria-hidden="true">&rarr;</span><span class="graph__who"><span class="visually-hidden">to Draft, allowed for </span><span class="pill pill--custom">Draft</span> <strong>Editors and administrators</strong> only</span></div></div></div><div class="feature-row feature-row--flip"><div><p class="eyebrow">Clarity</p><h2>People see what they can do</h2><p>The block editor stops offering Publish to a role the rules will refuse, so nobody clicks a button that is going to fail. If a blocked move gets through another way, a REST save returns a 403 and the classic editor shows a notice on the next screen.</p><ul class="tick-list"><li>No silent reverts, no mystery errors</li><li>Clear wording: your role cannot move this post from one status to another, ask an editor</li></ul></div></div><div class="feature-row"><div><p class="eyebrow">Without a plugin</p><h2>What WordPress does on its own</h2><p>WordPress already separates roles. A Contributor can write and submit a post for review but cannot publish it. An Author can publish their own posts. An Editor can publish anyone's. What core does not give you is one rule set for the moves in between, such as who may schedule, make private or unpublish, applied the same way in the editor, over REST and in the classic editor.</p><ul class="tick-list"><li>Editloft leaves the roles alone and adds the rules on top</li><li>Turn the module off and WordPress behaves exactly as it did before</li></ul></div></div><div class="feature-row feature-row--flip"><div><p class="eyebrow">Customise</p><h2>Change who can publish with one filter</h2><p>The rules are a plain array, so changing them is a few lines in a small plugin or your theme's functions file. This example also lets the Author role publish a draft:</p><pre class="code-block"><code>add_filter( 'editloft_status_transition_graph', function ( $graph ) {
+	$graph['draft']['publish']['roles'][] = 'author';
+	return $graph;
+} );</code></pre><ul class="tick-list"><li>Return an empty array to turn enforcement off</li><li>Each key is a from-status, then a to-status, then the roles allowed to make that move</li></ul></div></div><div class="feature-row"><div><p class="eyebrow">Flexibility</p><h2>Yours to change, and safe by default</h2><p>Different team, different rules. One filter, <code>editloft_status_transition_graph</code>, lets you reshape the whole graph. A status that is not in the graph is not gated, so a status added by another plugin never locks anyone out.</p><ul class="tick-list"><li>WP-CLI and scheduled publishes are never blocked</li><li>Every change that goes through is recorded in the audit trail</li></ul></div></div></div>
     </section>
 
     <section class="band" aria-labelledby="faq-heading">
       <div class="container">
-        <div class="section-head"><p class="eyebrow">Questions</p><h2 id="faq-heading">Common questions</h2></div>
+        <div class="section-head"><p class="eyebrow">Questions</p><h2 id="faq-heading">Status transitions FAQ</h2></div>
         <div class="faq">
+<details><summary>How do I stop authors and contributors publishing posts in WordPress?</summary><div class="faq__body"><p>WordPress lets an Author publish their own posts, and a Contributor can only submit for review. With Editloft's status transitions on, only editors and administrators can publish, schedule, make private or unpublish. Everyone else can send a draft to pending review, and you can change the roles with a filter.</p></div></details>
 <details><summary>Who can publish by default?</summary><div class="faq__body"><p>Editors and administrators. Writers can move a draft to pending review and back, and can trash their own unpublished work.</p></div></details>
 <details><summary>What happens when someone is blocked?</summary><div class="faq__body"><p>In the block editor the Publish button is not offered to roles the rules would refuse, and a blocked REST save returns a clear 403. In the classic editor a notice explains that their role cannot make that move and to ask an editor.</p></div></details>
 <details><summary>Are WP-CLI and scheduled publishes blocked?</summary><div class="faq__body"><p>Never. There is no editor to route them through, so they are always allowed, and they are still written to the audit trail.</p></div></details>
@@ -188,8 +237,8 @@
     </section>
     <section class="band band--elevated" aria-labelledby="related-heading">
       <div class="container">
-        <div class="section-head"><p class="eyebrow">Keep reading</p><h2 id="related-heading">Other parts of Editloft</h2></div>
-        <div class="card-grid card-grid--3"><a class="card card-link" href="/features/calendar/"><div class="icon-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div><h3>Editorial calendar</h3><p>Plan the week, drag stories between days, subscribe from your own calendar app.</p><span class="card__more">Read more &rarr;</span></a><a class="card card-link" href="/features/audit-trail/"><div class="icon-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1L3.5 8.5"/><path d="M3.5 4v4.5H8M12 7.5V12l3 2"/></svg></div><h3>Audit trail</h3><p>A record of every status change and date move, with the person and the path.</p><span class="card__more">Read more &rarr;</span></a><a class="card card-link" href="/features/developers/"><div class="icon-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 7L3.5 12l5 5M15.5 7l5 5-5 5M13.5 5l-3 14"/></svg></div><h3>For developers</h3><p>REST, WP-CLI, filters and a test suite.</p><span class="card__more">Read more &rarr;</span></a></div>
+        <div class="section-head"><p class="eyebrow">Also in Editloft</p><h2 id="related-heading">More about the Editloft plugin</h2></div>
+        <div class="card-grid card-grid--3"><a class="card card-link" href="/features/calendar/"><div class="icon-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div><h3>Editorial calendar</h3><p>Plan the week, drag stories between days, subscribe from your own calendar app.</p><span class="card__more">Read about the editorial calendar &rarr;</span></a><a class="card card-link" href="/features/audit-trail/"><div class="icon-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 12a8.5 8.5 0 1 0 2.6-6.1L3.5 8.5"/><path d="M3.5 4v4.5H8M12 7.5V12l3 2"/></svg></div><h3>Audit trail</h3><p>A record of every status change and date move, with the person and the path.</p><span class="card__more">Read about the audit trail &rarr;</span></a><a class="card card-link" href="/features/developers/"><div class="icon-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 7L3.5 12l5 5M15.5 7l5 5-5 5M13.5 5l-3 14"/></svg></div><h3>For developers</h3><p>REST, WP-CLI, filters and a test suite.</p><span class="card__more">Read the developer notes &rarr;</span></a></div>
       </div>
     </section>
     <section class="band band--navy cta-band" aria-labelledby="cta-heading">
@@ -213,7 +262,7 @@
           <p>Editorial workflow for WordPress: a calendar, an audit trail, and role-based control over who publishes. Free software, GPLv2 or later.</p>
         </div>
         <div class="footer-col">
-          <h2>Features</h2>
+          <p class="footer-title">Features</p>
           <ul>
             <li><a href="/features/calendar/">Editorial calendar</a></li>
             <li><a href="/features/audit-trail/">Audit trail</a></li>
@@ -222,16 +271,17 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h2>Learn</h2>
+          <p class="footer-title">Learn</p>
           <ul>
             <li><a href="/benefits/">Benefits by role</a></li>
+            <li><a href="/guides/wordpress-editorial-workflow/">Set up an editorial workflow</a></li>
             <li><a href="/compare/edit-flow/">Editloft and Edit Flow</a></li>
             <li><a href="/changelog/">Changelog</a></li>
             <li><a href="/about/">About</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h2>Get it</h2>
+          <p class="footer-title">Get it</p>
           <ul>
             <li><a href="/download/">Download</a></li>
             <li><a href="/support/">Support</a></li>

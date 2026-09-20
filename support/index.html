@@ -3,22 +3,29 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Editloft support: FAQ, migration and how to report a bug</title>
-  <meta name="description" content="Answers about Editloft: what modules it has, requirements, moving from Edit Flow, and how to report a bug or request a feature on GitHub.">
+  <title>Editloft support: FAQ, migration and bug reports</title>
+  <meta name="description" content="Answers about Editloft: its modules, requirements, moving from Edit Flow, and how to report a bug or request a feature on GitHub.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://editloft.com/support/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Editloft">
-  <meta property="og:title" content="Editloft support: FAQ, migration and how to report a bug">
-  <meta property="og:description" content="Answers about Editloft: what modules it has, requirements, moving from Edit Flow, and how to report a bug or request a feature on GitHub.">
+  <meta property="og:title" content="Editloft support: FAQ, migration and bug reports">
+  <meta property="og:description" content="Answers about Editloft: its modules, requirements, moving from Edit Flow, and how to report a bug or request a feature on GitHub.">
+  <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://editloft.com/support/">
   <meta property="og:image" content="https://editloft.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Editloft: editorial calendar, audit trail and publishing rules for WordPress">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Editloft support: FAQ, migration and how to report a bug">
-  <meta name="twitter:description" content="Answers about Editloft: what modules it has, requirements, moving from Edit Flow, and how to report a bug or request a feature on GitHub.">
+  <meta name="twitter:title" content="Editloft support: FAQ, migration and bug reports">
+  <meta name="twitter:description" content="Answers about Editloft: its modules, requirements, moving from Edit Flow, and how to report a bug or request a feature on GitHub.">
   <meta name="twitter:image" content="https://editloft.com/assets/og-image.png">
+  <meta name="twitter:image:alt" content="Editloft: editorial calendar, audit trail and publishing rules for WordPress">
+  <link rel="preload" href="/assets/fonts/libre-franklin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/fraunces-variable.woff2" as="font" type="font/woff2" crossorigin>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,13 +35,24 @@
       "@id": "https://editloft.com/#website",
       "url": "https://editloft.com/",
       "name": "Editloft",
-      "description": "A free, open source editorial workflow plugin for WordPress, a maintained fork of Edit Flow."
+      "description": "A free, open source editorial workflow plugin for WordPress, a maintained fork of Edit Flow.",
+      "publisher": {
+        "@id": "https://editloft.com/#org"
+      },
+      "inLanguage": "en"
     },
     {
       "@type": "Organization",
       "@id": "https://editloft.com/#org",
       "name": "Editloft",
       "url": "https://editloft.com/",
+      "description": "Editloft makes a free editorial workflow plugin for WordPress, a maintained fork of Edit Flow.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://editloft.com/assets/apple-touch-icon.png",
+        "width": 180,
+        "height": 180
+      },
       "founder": {
         "@id": "https://thisismyurl.com/about/#person"
       },
@@ -59,6 +77,24 @@
         "https://github.com/thisismyurl",
         "https://profiles.wordpress.org/thisismyurl/"
       ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://editloft.com/support/#webpage",
+      "url": "https://editloft.com/support/",
+      "name": "Editloft support: FAQ, migration and bug reports",
+      "isPartOf": {
+        "@id": "https://editloft.com/#website"
+      },
+      "author": {
+        "@id": "https://thisismyurl.com/about/#person"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-09-20",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://editloft.com/assets/og-image.png"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -154,7 +190,7 @@
         <ul>
 <li><a href="/features/">Features</a></li>
 <li><a href="/benefits/">Benefits</a></li>
-<li><a href="/compare/edit-flow/">Compare</a></li>
+<li><a href="/compare/edit-flow/">Edit Flow alternative</a></li>
 <li><a href="/changelog/">Changelog</a></li>
 <li><a href="/about/">About</a></li>
 <li><a href="/support/" aria-current="page">Support</a></li>
@@ -168,7 +204,7 @@
             <li><a href="/">Home</a></li>
 <li><a href="/features/">Features</a></li>
 <li><a href="/benefits/">Benefits</a></li>
-<li><a href="/compare/edit-flow/">Compare</a></li>
+<li><a href="/compare/edit-flow/">Edit Flow alternative</a></li>
 <li><a href="/changelog/">Changelog</a></li>
 <li><a href="/about/">About</a></li>
 <li><a href="/support/" aria-current="page">Support</a></li>
@@ -187,6 +223,7 @@
         <h1>Help with Editloft</h1>
         <p class="page-hero__lede">Editloft is built in the open, so the best place to ask a question, report a problem or request a feature is where the code lives. If GitHub is unfamiliar, there is a gentler front door too.</p>
         <div class="hero__actions"><a class="btn btn--primary btn--lg" href="https://github.com/thisismyurl/editloft/issues">Open the issue tracker</a><a class="btn btn--secondary btn--lg" href="https://thisismyurl.com/downloads/editloft/">Reach me another way</a></div>
+        <p class="page-hero__meta">By <a href="https://thisismyurl.com/about/" rel="me">Christopher Ross</a>. Last updated <time datetime="2026-09-20">September 20, 2026</time>.</p>
       </div>
     </div>
     <section class="band" aria-labelledby="faq-heading">
@@ -236,7 +273,7 @@
         <p>Download the plugin and switch on one module. You can switch it off again from the same screen.</p>
         <div class="hero__actions">
           <a class="btn btn--light btn--lg" href="/download/">Download Editloft</a>
-          <a class="btn btn--ghost-light btn--lg" href="/download/">Download</a>
+          <a class="btn btn--ghost-light btn--lg" href="/compare/edit-flow/">Compare with Edit Flow</a>
         </div>
       </div>
     </section>
@@ -251,7 +288,7 @@
           <p>Editorial workflow for WordPress: a calendar, an audit trail, and role-based control over who publishes. Free software, GPLv2 or later.</p>
         </div>
         <div class="footer-col">
-          <h2>Features</h2>
+          <p class="footer-title">Features</p>
           <ul>
             <li><a href="/features/calendar/">Editorial calendar</a></li>
             <li><a href="/features/audit-trail/">Audit trail</a></li>
@@ -260,16 +297,17 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h2>Learn</h2>
+          <p class="footer-title">Learn</p>
           <ul>
             <li><a href="/benefits/">Benefits by role</a></li>
+            <li><a href="/guides/wordpress-editorial-workflow/">Set up an editorial workflow</a></li>
             <li><a href="/compare/edit-flow/">Editloft and Edit Flow</a></li>
             <li><a href="/changelog/">Changelog</a></li>
             <li><a href="/about/">About</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h2>Get it</h2>
+          <p class="footer-title">Get it</p>
           <ul>
             <li><a href="/download/">Download</a></li>
             <li><a href="/support/">Support</a></li>

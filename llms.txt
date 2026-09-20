@@ -1,0 +1,23 @@
+# Editloft
+
+> Editloft is a free, GPLv2 WordPress plugin: a maintained fork of Edit Flow rebuilt for the block editor. It has exactly three modules plus a settings screen: an editorial calendar, an audit trail and role-based status transitions. It does not include custom post statuses, editorial comments, editorial metadata, notifications or a story budget.
+
+## Features
+- [Editorial calendar](https://editloft.com/features/calendar/): drag-and-drop scheduling, unscheduled drafts panel, filters, optional signed iCal feed
+- [Audit trail](https://editloft.com/features/audit-trail/): every status change and date move with the person and the path; editor, REST and WP-CLI
+- [Status transitions](https://editloft.com/features/status-transitions/): role-based rules for who can submit, schedule, publish and unpublish
+- [For developers](https://editloft.com/features/developers/): REST field, WP-CLI command, filters, tests
+- [All features](https://editloft.com/features/): the three modules and what is not included
+
+## Guides and comparison
+- [Edit Flow alternative](https://editloft.com/compare/edit-flow/): what Editloft and Edit Flow each include
+- [How to set up an editorial workflow in WordPress](https://editloft.com/guides/wordpress-editorial-workflow/): five steps using WordPress roles and statuses
+- [Benefits by role](https://editloft.com/benefits/): what changes for editors, writers, owners and developers
+
+## Project
+- [Download and install](https://editloft.com/download/): requires WordPress 6.4+ and PHP 7.4+
+- [Changelog](https://editloft.com/changelog/): dated release notes
+- [About](https://editloft.com/about/): the story of the fork and who maintains it
+- [Support](https://editloft.com/support/): FAQ, migration, how to report a bug
+
+Maintained by Christopher Ross (https://thisismyurl.com/about/). Source: https://github.com/thisismyurl/editloft

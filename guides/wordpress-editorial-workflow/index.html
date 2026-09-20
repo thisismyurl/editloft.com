@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Editloft benefits for editors, writers and site owners</title>
-  <meta name="description" content="How Editloft helps each role on an editorial team: a shared calendar for editors, clean handoffs for writers, control for owners and history for developers.">
+  <title>Set up an editorial workflow in WordPress | Editloft</title>
+  <meta name="description" content="Build a WordPress editorial workflow in five steps: name stages, assign owners, plan on a calendar, keep a history, review monthly. No plugin required.">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://editloft.com/benefits/">
+  <link rel="canonical" href="https://editloft.com/guides/wordpress-editorial-workflow/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
   <meta property="og:site_name" content="Editloft">
-  <meta property="og:title" content="Editloft benefits for editors, writers and site owners">
-  <meta property="og:description" content="How Editloft helps each role on an editorial team: a shared calendar for editors, clean handoffs for writers, control for owners and history for developers.">
+  <meta property="og:title" content="Set up an editorial workflow in WordPress | Editloft">
+  <meta property="og:description" content="Build a WordPress editorial workflow in five steps: name stages, assign owners, plan on a calendar, keep a history, review monthly. No plugin required.">
   <meta property="og:locale" content="en_US">
-  <meta property="og:url" content="https://editloft.com/benefits/">
+  <meta property="og:url" content="https://editloft.com/guides/wordpress-editorial-workflow/">
   <meta property="og:image" content="https://editloft.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Editloft: editorial calendar, audit trail and publishing rules for WordPress">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Editloft benefits for editors, writers and site owners">
-  <meta name="twitter:description" content="How Editloft helps each role on an editorial team: a shared calendar for editors, clean handoffs for writers, control for owners and history for developers.">
+  <meta name="twitter:title" content="Set up an editorial workflow in WordPress | Editloft">
+  <meta name="twitter:description" content="Build a WordPress editorial workflow in five steps: name stages, assign owners, plan on a calendar, keep a history, review monthly. No plugin required.">
   <meta name="twitter:image" content="https://editloft.com/assets/og-image.png">
   <meta name="twitter:image:alt" content="Editloft: editorial calendar, audit trail and publishing rules for WordPress">
   <link rel="preload" href="/assets/fonts/libre-franklin-variable.woff2" as="font" type="font/woff2" crossorigin>
@@ -80,9 +80,9 @@
     },
     {
       "@type": "WebPage",
-      "@id": "https://editloft.com/benefits/#webpage",
-      "url": "https://editloft.com/benefits/",
-      "name": "Editloft benefits for editors, writers and site owners",
+      "@id": "https://editloft.com/guides/wordpress-editorial-workflow/#webpage",
+      "url": "https://editloft.com/guides/wordpress-editorial-workflow/",
+      "name": "Set up an editorial workflow in WordPress | Editloft",
       "isPartOf": {
         "@id": "https://editloft.com/#website"
       },
@@ -108,8 +108,37 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Benefits",
-          "item": "https://editloft.com/benefits/"
+          "name": "Guide: editorial workflow",
+          "item": "https://editloft.com/guides/wordpress-editorial-workflow/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need a plugin to run an editorial workflow in WordPress?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. WordPress already has draft, pending review, scheduled and published statuses, plus roles for contributors, authors and editors. A plugin helps when you want a shared calendar, a record of changes, or stricter rules about who can publish."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a Contributor, an Author and an Editor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Contributor can write and submit posts for review but cannot publish. An Author can publish their own posts. An Editor can publish and manage everyone's posts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I see who changed a post's status?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WordPress keeps revisions of the content but not a clear history of status and date changes. Editloft's audit trail records each one, with the person and the path it came through."
+          }
         }
       ]
     }
@@ -128,7 +157,7 @@
       <nav class="site-nav site-nav--desktop" aria-label="Primary">
         <ul>
 <li><a href="/features/">Features</a></li>
-<li><a href="/benefits/" aria-current="page">Benefits</a></li>
+<li><a href="/benefits/">Benefits</a></li>
 <li><a href="/compare/edit-flow/">Edit Flow alternative</a></li>
 <li><a href="/changelog/">Changelog</a></li>
 <li><a href="/about/">About</a></li>
@@ -142,7 +171,7 @@
           <ul>
             <li><a href="/">Home</a></li>
 <li><a href="/features/">Features</a></li>
-<li><a href="/benefits/" aria-current="page">Benefits</a></li>
+<li><a href="/benefits/">Benefits</a></li>
 <li><a href="/compare/edit-flow/">Edit Flow alternative</a></li>
 <li><a href="/changelog/">Changelog</a></li>
 <li><a href="/about/">About</a></li>
@@ -157,62 +186,69 @@
   <main id="main">
     <div class="page-hero">
       <div class="container">
-        <ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Benefits</li></ol>
-        <p class="eyebrow">Benefits</p>
-        <h1>What Editloft changes for each role on your desk</h1>
-        <p class="page-hero__lede">Editloft does not try to run your newsroom. It makes three things visible and controllable, and each of them helps a different person at the desk.</p>
+        <ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="/">Home</a></li><li aria-current="page">Guide: editorial workflow</li></ol>
+        <p class="eyebrow">Guide</p>
+        <h1>How to set up an editorial workflow in WordPress</h1>
+        <p class="page-hero__lede">A working editorial workflow is a short list of stages, a clear owner for each move, and one place to see the plan. Here is how to build that with what WordPress already gives you, and where a plugin helps.</p>
         <div class="hero__actions"><a class="btn btn--primary btn--lg" href="/download/">Download free</a><a class="btn btn--secondary btn--lg" href="/features/">All features</a></div>
         <p class="page-hero__meta">By <a href="https://thisismyurl.com/about/" rel="me">Christopher Ross</a>. Last updated <time datetime="2026-09-20">September 20, 2026</time>.</p>
       </div>
     </div>
-    <section class="band" aria-labelledby="roles-heading">
-      <div class="container">
-        <div class="section-head"><p class="eyebrow">By role</p><h2 id="roles-heading">Who gains what</h2></div>
-        <div class="card-grid"><article class="card persona"><div class="icon-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="1.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div><p class="persona__role">Managing editors</p><h3>See the whole desk, decide what goes out</h3><ul class="tick-list"><li>Plan the week on one calendar, with drafts kept apart from what is scheduled.</li><li>Move a story to another day with a drag, not a trip through the edit screen.</li><li>Keep the last word on what publishes, schedules and comes down.</li></ul></article><article class="card persona"><div class="icon-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.2"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5M16 5.5a3 3 0 0 1 0 6M18 14.8c1.9.7 3 2.4 3 5.2"/></svg></div><p class="persona__role">Writers and contributors</p><h3>Know what you can do and hand work over cleanly</h3><ul class="tick-list"><li>Send a draft to pending review when it is ready.</li><li>Never click a Publish button that was going to fail.</li><li>See the history of your own post if a date or status changes.</li></ul></article><article class="card persona"><div class="icon-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.5-3.1 8.2-7.5 9.5-4.4-1.3-7.5-5-7.5-9.5V6L12 3z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg></div><p class="persona__role">Site owners and administrators</p><h3>Control without micromanaging</h3><ul class="tick-list"><li>Choose which roles can publish, schedule and unpublish.</li><li>Answer who changed a status or date in seconds.</li><li>Switch off any module you do not need, and rely on software that makes no outbound requests.</li></ul></article><article class="card persona"><div class="icon-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 7L3.5 12l5 5M15.5 7l5 5-5 5M13.5 5l-3 14"/></svg></div><p class="persona__role">Developers and agencies</p><h3>Predictable, scriptable and open</h3><ul class="tick-list"><li>Read audit history with WP-CLI or REST.</li><li>Reshape the rules with filters instead of patching the plugin.</li><li>Hand a client a small, tested plugin under a familiar license.</li></ul></article></div>
-      </div>
-    </section>
+    <section class="band">
+      <div class="container two-col">
+        <nav class="toc" aria-label="On this page"><p class="eyebrow">On this page</p><ul><li><a href="#stages">1. Name your stages</a></li><li><a href="#roles">2. Give each move an owner</a></li><li><a href="#plan">3. Plan on a calendar</a></li><li><a href="#history">4. Keep a history</a></li><li><a href="#review">5. Review it monthly</a></li></ul></nav>
+        <div class="prose">
+          <h2 id="stages">1. Name your stages</h2>
+          <p>Start with the statuses WordPress ships: draft, pending review, scheduled and published. Most small desks never need more. Draft means someone is writing it. Pending review means it is ready for an editor. Scheduled means an editor has approved it and set a date. Published means it is live. Write those four definitions down and share them, because a status only works when everyone reads it the same way.</p>
 
-    <section class="band band--elevated" aria-labelledby="outcomes-heading">
-      <div class="container">
-        <div class="section-head"><p class="eyebrow">Outcomes</p><h2 id="outcomes-heading">What that adds up to</h2></div>
-        <ol class="steps">
-          <li class="step"><h3>Fewer surprises</h3><p>A calendar that shows the real plan makes a thin Friday visible on Monday.</p></li>
-          <li class="step"><h3>Faster answers</h3><p>The audit trail turns who did that into a quick look instead of a hunt.</p></li>
-          <li class="step"><h3>Clear ownership</h3><p>When roles decide who publishes, there is no doubt about who is responsible for what goes out.</p></li>
-        </ol>
-      </div>
-    </section>
+          <h2 id="roles">2. Give each move an owner</h2>
+          <div class="table-wrap" tabindex="0" role="region" aria-label="WordPress roles and publishing, scrollable">
+            <table class="compare-table">
+              <caption>Who can publish in WordPress by default</caption>
+              <thead><tr><th scope="col">Role</th><th scope="col">Write posts</th><th scope="col">Submit for review</th><th scope="col">Publish</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">Contributor</th><td>Yes, own posts</td><td>Yes</td><td>No</td></tr>
+                <tr><th scope="row">Author</th><td>Yes, own posts</td><td>Yes</td><td>Yes, own posts</td></tr>
+                <tr><th scope="row">Editor</th><td>Yes, anyone's</td><td>Yes</td><td>Yes, anyone's</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>WordPress roles already say who can do what. A Contributor can write and submit for review but cannot publish. An Author can publish their own posts. An Editor can publish and manage everyone's posts. If you want writers to hand work over instead of publishing it themselves, use Contributors, or keep Authors and enforce the rule. Editloft's <a href="/features/status-transitions/">status transitions</a> do the second: only editors and administrators can publish, schedule and unpublish.</p>
 
-    <section class="band" aria-labelledby="light-heading">
-      <div class="container">
-        <div class="feature-row">
-          <div>
-            <p class="eyebrow">Lightweight</p>
-            <h2 id="light-heading">Nothing you have to switch off</h2>
-            <p>Editloft is deliberately small. It carries three modules, each independent, and a disabled module loads nothing. It adds no stylesheet to every admin page, sends no data anywhere and asks for no account.</p>
-            <ul class="tick-list">
-              <li>Free under GPLv2 or later, with no paid tier</li>
-              <li>Built for the block editor and current PHP</li>
-              <li>Actively maintained: see the <a href="/changelog/">dated changelog</a></li>
-            </ul>
-          </div>
-          <div class="card">
-            <p class="eyebrow">Good to know</p>
-            <h3>Where Editloft is not the right fit</h3>
-            <p>If your team relies on custom post statuses, private editorial comments, editorial metadata fields, email notifications or a story budget, those are not in Editloft. <a href="/compare/edit-flow/">Compare it with Edit Flow</a> before you decide.</p>
-          </div>
+          <h2 id="plan">3. Plan on a calendar</h2>
+          <p>A list of posts tells you what exists. A calendar tells you what is missing. Put every scheduled story on one calendar, keep undated drafts in a separate pile, and look at the next two weeks at the start of each week. The Editloft <a href="/features/calendar/">editorial calendar</a> does this inside the WordPress admin, with drag-and-drop dates and an optional iCal feed.</p>
+
+          <h2 id="history">4. Keep a history</h2>
+          <p>Sooner or later someone will ask why a story went live early or came back down. WordPress revisions show what changed in the text, not who moved the status or the date. An <a href="/features/audit-trail/">audit trail</a> answers that in seconds. Whatever tool you use, record status changes, date changes and who made them.</p>
+
+          <h2 id="review">5. Review it monthly</h2>
+          <p>Once a month, look at where stories stall. If drafts pile up in pending review, you have an editor bottleneck. If the calendar is thin on Fridays, you have a planning gap. Change one thing, then look again next month.</p>
+
+          <h2>Where Editloft fits</h2>
+          <p>Editloft is a free plugin with three modules: an editorial calendar, an audit trail and role-based status transitions. It does not add custom statuses, editorial comments, notifications or a story budget. If you need those, read the <a href="/compare/edit-flow/">Edit Flow alternative comparison</a> first.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="band band--elevated" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-head"><p class="eyebrow">Questions</p><h2 id="faq-heading">Editorial workflow FAQ</h2></div>
+        <div class="faq">
+<details><summary>Do I need a plugin to run an editorial workflow in WordPress?</summary><div class="faq__body"><p>No. WordPress already has draft, pending review, scheduled and published statuses, plus roles for contributors, authors and editors. A plugin helps when you want a shared calendar, a record of changes, or stricter rules about who can publish.</p></div></details>
+<details><summary>What is the difference between a Contributor, an Author and an Editor?</summary><div class="faq__body"><p>A Contributor can write and submit posts for review but cannot publish. An Author can publish their own posts. An Editor can publish and manage everyone's posts.</p></div></details>
+<details><summary>How do I see who changed a post&#x27;s status?</summary><div class="faq__body"><p>WordPress keeps revisions of the content but not a clear history of status and date changes. Editloft's audit trail records each one, with the person and the path it came through.</p></div></details>
+</div>
       </div>
     </section>
 
     <section class="band band--navy cta-band" aria-labelledby="cta-heading">
       <div class="container">
         <p class="eyebrow">Free, open source, GPLv2</p>
-        <h2 id="cta-heading">Try Editloft on a staging copy of your site</h2>
-        <p>It is free, it takes a minute to install, and you can switch each module off again from one settings screen.</p>
+        <h2 id="cta-heading">Try the workflow on a staging site</h2>
+        <p>Editloft is free and takes a minute to install. Switch on the modules you want and leave the rest off.</p>
         <div class="hero__actions">
           <a class="btn btn--light btn--lg" href="/download/">Download Editloft</a>
-          <a class="btn btn--ghost-light btn--lg" href="/features/">See all features</a>
+          <a class="btn btn--ghost-light btn--lg" href="/features/">See the features</a>
         </div>
       </div>
     </section>

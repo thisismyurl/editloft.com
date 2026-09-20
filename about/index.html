@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About Editloft: the story of the Edit Flow fork for WordPress</title>
+  <title>About Editloft: the story of the Edit Flow fork</title>
   <meta name="description" content="Why Editloft exists: a maintained fork of Edit Flow rebuilt for the block editor, what was kept, what was retired and who is building it.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://editloft.com/about/">
@@ -11,14 +11,21 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Editloft">
-  <meta property="og:title" content="About Editloft: the story of the Edit Flow fork for WordPress">
+  <meta property="og:title" content="About Editloft: the story of the Edit Flow fork">
   <meta property="og:description" content="Why Editloft exists: a maintained fork of Edit Flow rebuilt for the block editor, what was kept, what was retired and who is building it.">
+  <meta property="og:locale" content="en_US">
   <meta property="og:url" content="https://editloft.com/about/">
   <meta property="og:image" content="https://editloft.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Editloft: editorial calendar, audit trail and publishing rules for WordPress">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="About Editloft: the story of the Edit Flow fork for WordPress">
+  <meta name="twitter:title" content="About Editloft: the story of the Edit Flow fork">
   <meta name="twitter:description" content="Why Editloft exists: a maintained fork of Edit Flow rebuilt for the block editor, what was kept, what was retired and who is building it.">
   <meta name="twitter:image" content="https://editloft.com/assets/og-image.png">
+  <meta name="twitter:image:alt" content="Editloft: editorial calendar, audit trail and publishing rules for WordPress">
+  <link rel="preload" href="/assets/fonts/libre-franklin-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/fraunces-variable.woff2" as="font" type="font/woff2" crossorigin>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -28,13 +35,24 @@
       "@id": "https://editloft.com/#website",
       "url": "https://editloft.com/",
       "name": "Editloft",
-      "description": "A free, open source editorial workflow plugin for WordPress, a maintained fork of Edit Flow."
+      "description": "A free, open source editorial workflow plugin for WordPress, a maintained fork of Edit Flow.",
+      "publisher": {
+        "@id": "https://editloft.com/#org"
+      },
+      "inLanguage": "en"
     },
     {
       "@type": "Organization",
       "@id": "https://editloft.com/#org",
       "name": "Editloft",
       "url": "https://editloft.com/",
+      "description": "Editloft makes a free editorial workflow plugin for WordPress, a maintained fork of Edit Flow.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://editloft.com/assets/apple-touch-icon.png",
+        "width": 180,
+        "height": 180
+      },
       "founder": {
         "@id": "https://thisismyurl.com/about/#person"
       },
@@ -59,6 +77,24 @@
         "https://github.com/thisismyurl",
         "https://profiles.wordpress.org/thisismyurl/"
       ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://editloft.com/about/#webpage",
+      "url": "https://editloft.com/about/",
+      "name": "About Editloft: the story of the Edit Flow fork",
+      "isPartOf": {
+        "@id": "https://editloft.com/#website"
+      },
+      "author": {
+        "@id": "https://thisismyurl.com/about/#person"
+      },
+      "inLanguage": "en",
+      "dateModified": "2026-09-20",
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://editloft.com/assets/og-image.png"
+      }
     },
     {
       "@type": "BreadcrumbList",
@@ -93,7 +129,7 @@
         <ul>
 <li><a href="/features/">Features</a></li>
 <li><a href="/benefits/">Benefits</a></li>
-<li><a href="/compare/edit-flow/">Compare</a></li>
+<li><a href="/compare/edit-flow/">Edit Flow alternative</a></li>
 <li><a href="/changelog/">Changelog</a></li>
 <li><a href="/about/" aria-current="page">About</a></li>
 <li><a href="/support/">Support</a></li>
@@ -107,7 +143,7 @@
             <li><a href="/">Home</a></li>
 <li><a href="/features/">Features</a></li>
 <li><a href="/benefits/">Benefits</a></li>
-<li><a href="/compare/edit-flow/">Compare</a></li>
+<li><a href="/compare/edit-flow/">Edit Flow alternative</a></li>
 <li><a href="/changelog/">Changelog</a></li>
 <li><a href="/about/" aria-current="page">About</a></li>
 <li><a href="/support/">Support</a></li>
@@ -126,6 +162,7 @@
         <h1>Why Editloft exists</h1>
         <p class="page-hero__lede">Editloft did not start from a blank page. It started from Edit Flow, a plugin that got editorial WordPress right long before I touched it. This is what it did, why I forked it, and what I kept.</p>
         
+        <p class="page-hero__meta">By <a href="https://thisismyurl.com/about/" rel="me">Christopher Ross</a>. Last updated <time datetime="2026-09-20">September 20, 2026</time>.</p>
       </div>
     </div>
     <section class="band">
@@ -135,7 +172,7 @@
           <h2 id="history">Edit Flow&#8217;s history</h2>
           <p>Edit Flow was built by Automattic, Mohammad Jangda and Daniel Bachhuber, with a copyright span of 2009 to 2019. It was one of the first plugins to treat WordPress as a tool for a team instead of a single writer. It gave WordPress custom post statuses, an editorial calendar, a story budget view and private editorial comments. If you ran an editorial team on WordPress in the 2010s, there is a good chance you ran it on Edit Flow. The ideas held up, and everything Editloft does is downstream of them.</p>
           <div class="diagram-frame" tabindex="0" role="group" aria-label="Scrollable diagram: the lineage from Edit Flow to Editloft">
-            <img src="/assets/diagram-lineage.svg" width="1536" height="1024" alt="A timeline from Edit Flow's 2009 release through the classic editor era and the arrival of the block editor to Editloft, a GPL fork rebuilt for the block editor and Full Site Editing.">
+            <img src="/assets/diagram-lineage.svg" loading="lazy" decoding="async" width="1536" height="1024" alt="A timeline from Edit Flow's 2009 release through the classic editor era and the arrival of the block editor to Editloft, a GPL fork rebuilt for the block editor and Full Site Editing.">
           </div>
 
           <h2 id="stalled">Why it stalled</h2>
@@ -179,7 +216,7 @@
           <p>Editorial workflow for WordPress: a calendar, an audit trail, and role-based control over who publishes. Free software, GPLv2 or later.</p>
         </div>
         <div class="footer-col">
-          <h2>Features</h2>
+          <p class="footer-title">Features</p>
           <ul>
             <li><a href="/features/calendar/">Editorial calendar</a></li>
             <li><a href="/features/audit-trail/">Audit trail</a></li>
@@ -188,16 +225,17 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h2>Learn</h2>
+          <p class="footer-title">Learn</p>
           <ul>
             <li><a href="/benefits/">Benefits by role</a></li>
+            <li><a href="/guides/wordpress-editorial-workflow/">Set up an editorial workflow</a></li>
             <li><a href="/compare/edit-flow/">Editloft and Edit Flow</a></li>
             <li><a href="/changelog/">Changelog</a></li>
             <li><a href="/about/">About</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h2>Get it</h2>
+          <p class="footer-title">Get it</p>
           <ul>
             <li><a href="/download/">Download</a></li>
             <li><a href="/support/">Support</a></li>

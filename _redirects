@@ -1,3 +1,22 @@
 # Cloudflare Pages redirects. Apex (editloft.com) is the canonical host.
 # Send the www host to the apex so there is one canonical origin, no chains.
 https://www.editloft.com/* https://editloft.com/:splat 301!
+
+# Likely inbound and mistyped paths go to the page that answers them.
+/compare /compare/edit-flow/ 301
+/compare/ /compare/edit-flow/ 301
+/alternative /compare/edit-flow/ 301
+/alternative/ /compare/edit-flow/ 301
+/guides /guides/wordpress-editorial-workflow/ 301
+/guides/ /guides/wordpress-editorial-workflow/ 301
+/edit-flow /compare/edit-flow/ 301
+/edit-flow/ /compare/edit-flow/ 301
+/edit-flow-alternative /compare/edit-flow/ 301
+/edit-flow-alternative/ /compare/edit-flow/ 301
+/calendar /features/calendar/ 301
+/calendar/ /features/calendar/ 301
+/audit-trail /features/audit-trail/ 301
+/audit-trail/ /features/audit-trail/ 301
+/status-transitions /features/status-transitions/ 301
+/status-transitions/ /features/status-transitions/ 301
+/wordpress-editorial-calendar /features/calendar/ 301
