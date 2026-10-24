@@ -1,0 +1,6 @@
+Contact: https://github.com/thisismyurl/editloft/security/advisories/new
+Contact: mailto:hello@thisismyurl.com
+Expires: 2027-10-24T00:00:00.000Z
+Preferred-Languages: en
+Policy: https://github.com/thisismyurl/editloft/blob/main/SECURITY.md
+Canonical: https://editloft.com/.well-known/security.txt

@@ -90,7 +90,7 @@
         "@id": "https://thisismyurl.com/about/#person"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-20",
+      "dateModified": "2026-10-24",
       "primaryImageOfPage": {
         "@type": "ImageObject",
         "url": "https://editloft.com/assets/og-image.png"
@@ -162,13 +162,13 @@
         <h1>Release history, dated</h1>
         <p class="page-hero__lede">Every release is tagged and dated. Here are the recent ones in plain language. The complete technical changelog lives in the repository.</p>
         <div class="hero__actions"><a class="btn btn--primary btn--lg" href="https://github.com/thisismyurl/editloft/blob/main/CHANGELOG.md">Full changelog on GitHub</a><a class="btn btn--secondary btn--lg" href="/download/">Download</a></div>
-        <p class="page-hero__meta">By <a href="https://thisismyurl.com/about/" rel="me">Christopher Ross</a>. Last updated <time datetime="2026-09-20">September 20, 2026</time>.</p>
+        <p class="page-hero__meta">By <a href="https://thisismyurl.com/about/" rel="me">Christopher Ross</a>. Last updated <time datetime="2026-10-24">October 24, 2026</time>.</p>
       </div>
     </div>
     <section class="band" aria-labelledby="rel-heading">
       <div class="container">
         <div class="section-head"><p class="eyebrow">Versions</p><h2 id="rel-heading">What changed and why it mattered</h2><p>Versions use the scheme 0.6DDD.HHMM, where DDD is the day of the year and HHMM is the build time.</p></div>
-        <ul class="releases"><li class="release"><div class="release__meta"><strong>0.6263.1854</strong>2026-09-20</div><div><h3>Publishing from an editor account works again</h3><p>Editors and administrators can move a post from draft to published or scheduled without a 403 in the block editor. WP-CLI and scheduled publishes are no longer gated. A new <code>wp editloft audit &lt;post_id&gt;</code> command prints a post's audit trail, and a 22-test PHPUnit suite now runs in CI. The calendar feed link is signed with HMAC-SHA256.</p></div></li><li class="release"><div class="release__meta"><strong>0.6218.1049</strong>2026-08-06</div><div><h3>Saving from the block editor works again</h3><p>A REST filter registered without declaring its second argument ended every block-editor save in a fatal error. Quick Edit was unaffected, which made the bug look selective. It shipped in two earlier builds, so anyone on 0.6194.1016 or 0.6199.0938 should update.</p></div></li><li class="release"><div class="release__meta"><strong>0.6199.0938</strong>2026-07-18</div><div><h3>Calendar entries show their post type icon</h3><p>The calendar grid now draws the icon each post type registered, so a page, a post and a custom type no longer look alike. Dashicons take the colour of the entry they sit in so they stay readable against every status.</p></div></li><li class="release"><div class="release__meta"><strong>0.6194.1016</strong>2026-07-13</div><div><h3>First public release as a standalone fork</h3><p>The unscheduled panel began listing only truly unscheduled posts, and the inbound Cloud Sync webhook that could never fire was disabled. The README and changelog were added.</p></div></li></ul>
+        <ul class="releases"><li class="release"><div class="release__meta"><strong>0.6263.1931</strong>2026-09-20</div><div><h3>Move anything from the keyboard, undo it, and publishing works for editors</h3><p>Every calendar entry now has a "Move to another date" button and every unscheduled draft a "Schedule" button, so you no longer have to drag, and every move can be undone. Filters apply as you change them and are remembered. Editors and administrators can publish and schedule without a 403 in the block editor, authors are offered Submit for Review instead of a Publish button that failed, and WP-CLI and scheduled publishes are no longer gated. A scheduled post dragged to a new day now moves the moment WordPress publishes it, and the audit trail reads in plain sentences with the newest ten changes first.</p><p>This build also carries the changes of an earlier same-day build, 0.6263.1854, which was never released as a download: the <code>wp editloft audit &lt;post_id&gt;</code> command, a 22-test PHPUnit suite that runs in CI, and a calendar feed link signed with HMAC-SHA256. The signing changed the link, so an old feed link stops working. Copy the new one from the Screen Options tab on the calendar page. The feed is off by default.</p></div></li><li class="release"><div class="release__meta"><strong>0.6218.1049</strong>2026-08-06</div><div><h3>Saving from the block editor works again</h3><p>A REST filter registered without declaring its second argument ended every block-editor save in a fatal error. Quick Edit was unaffected, which made the bug look selective. It shipped in two earlier builds, so anyone on 0.6194.1016 or 0.6199.0938 should update.</p></div></li><li class="release"><div class="release__meta"><strong>0.6199.0938</strong>2026-07-18</div><div><h3>Calendar entries show their post type icon</h3><p>The calendar grid now draws the icon each post type registered, so a page, a post and a custom type no longer look alike. Dashicons take the colour of the entry they sit in so they stay readable against every status.</p></div></li><li class="release"><div class="release__meta"><strong>0.6194.1016</strong>2026-07-13</div><div><h3>First public release as a standalone fork</h3><p>The unscheduled panel began listing only truly unscheduled posts, and the inbound Cloud Sync webhook that could never fire was disabled. The README and changelog were added.</p></div></li></ul>
       </div>
     </section>
 
@@ -229,6 +229,9 @@
             <li><a href="https://github.com/thisismyurl/editloft">GitHub</a></li>
             <li><a href="/privacy/">Privacy</a></li>
             <li><a href="/terms/">Terms</a></li>
+            <li><a href="/accessibility/">Accessibility</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/newsletter/">Newsletter</a></li>
           </ul>
         </div>
       </div>

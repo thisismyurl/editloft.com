@@ -85,7 +85,7 @@
       "applicationCategory": "BusinessApplication",
       "applicationSubCategory": "WordPress Plugin",
       "operatingSystem": "WordPress 6.4+",
-      "softwareVersion": "0.6263.1854",
+      "softwareVersion": "0.6263.1931",
       "softwareRequirements": "PHP 7.4+",
       "license": "https://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
       "offers": {
@@ -131,7 +131,7 @@
         "@id": "https://thisismyurl.com/about/#person"
       },
       "inLanguage": "en",
-      "dateModified": "2026-09-20",
+      "dateModified": "2026-10-24",
       "about": {
         "@id": "https://editloft.com/#software"
       },
@@ -240,7 +240,7 @@
         <div>
           <p class="eyebrow hero__eyebrow">Free WordPress editorial workflow plugin, a maintained Edit Flow fork</p>
           <h1 id="hero-heading">A free editorial workflow plugin for WordPress</h1>
-          <p class="hero__lede">Editloft gives an editorial team three things WordPress does not: a calendar you can plan a week around, a record of every status change and date move, and rules about who may publish. It is small on purpose, and it is an <a href="/compare/edit-flow/">Edit Flow alternative</a> built for the block editor.</p>
+          <p class="hero__lede">Editloft gives an editorial team three things WordPress does not: a calendar you can plan a week around, a record of every status change and date move, and rules about who may publish. It is small on purpose, and it is an <a href="/compare/edit-flow/">Edit Flow alternative</a> that works in the block editor.</p>
           <div class="hero__actions">
             <a class="btn btn--primary btn--lg" href="/download/">Download free</a>
             <a class="btn btn--secondary btn--lg" href="/features/">See the features</a>
@@ -261,7 +261,7 @@
         <ul class="stats">
           <li class="stat"><span class="stat__value">3</span><span class="stat__label">focused modules: calendar, audit trail and status transitions</span></li>
           <li class="stat"><span class="stat__value">22</span><span class="stat__label">automated tests run on every change</span></li>
-          <li class="stat"><span class="stat__value">6.4+</span><span class="stat__label">WordPress version, block editor ready</span></li>
+          <li class="stat"><span class="stat__value">6.4+</span><span class="stat__label">WordPress version, works in the block editor</span></li>
           <li class="stat"><span class="stat__value">GPLv2</span><span class="stat__label">the same license as Edit Flow and WordPress</span></li>
         </ul>
       </div>
@@ -372,7 +372,7 @@
     <section class="band band--elevated" aria-label="A note from the maintainer">
       <div class="container">
         <figure class="statement">
-          <blockquote>I ran newsroom-style publishing on WordPress for years. I wanted the small, sharp core back: the few things I used every day, rebuilt for the block editor, with nothing to switch off on install.</blockquote>
+          <blockquote>I ran newsroom-style publishing on WordPress for years. I wanted the small, sharp core back: the few things I used every day, rebuilt for current WordPress, with nothing to switch off on install.</blockquote>
           <figcaption>Christopher Ross, maintainer</figcaption>
         </figure>
       </div>
@@ -402,7 +402,7 @@
           <p class="eyebrow">Recent releases</p>
           <h2 id="releases-heading">Actively maintained, and dated to prove it</h2>
         </div>
-        <ul class="releases"><li class="release"><div class="release__meta"><strong>0.6263.1854</strong>2026-09-20</div><div><h3>Publishing from an editor account works again</h3><p>Editors and administrators can move a post from draft to published or scheduled without a 403 in the block editor. WP-CLI and scheduled publishes are no longer gated. A new <code>wp editloft audit &lt;post_id&gt;</code> command prints a post's audit trail, and a 22-test PHPUnit suite now runs in CI. The calendar feed link is signed with HMAC-SHA256.</p></div></li><li class="release"><div class="release__meta"><strong>0.6218.1049</strong>2026-08-06</div><div><h3>Saving from the block editor works again</h3><p>A REST filter registered without declaring its second argument ended every block-editor save in a fatal error. Quick Edit was unaffected, which made the bug look selective. It shipped in two earlier builds, so anyone on 0.6194.1016 or 0.6199.0938 should update.</p></div></li><li class="release"><div class="release__meta"><strong>0.6199.0938</strong>2026-07-18</div><div><h3>Calendar entries show their post type icon</h3><p>The calendar grid now draws the icon each post type registered, so a page, a post and a custom type no longer look alike. Dashicons take the colour of the entry they sit in so they stay readable against every status.</p></div></li></ul>
+        <ul class="releases"><li class="release"><div class="release__meta"><strong>0.6263.1931</strong>2026-09-20</div><div><h3>Move anything from the keyboard, undo it, and publishing works for editors</h3><p>Every calendar entry now has a "Move to another date" button and every unscheduled draft a "Schedule" button, so you no longer have to drag, and every move can be undone. Filters apply as you change them and are remembered. Editors and administrators can publish and schedule without a 403 in the block editor, authors are offered Submit for Review instead of a Publish button that failed, and WP-CLI and scheduled publishes are no longer gated. A scheduled post dragged to a new day now moves the moment WordPress publishes it, and the audit trail reads in plain sentences with the newest ten changes first.</p><p>This build also carries the changes of an earlier same-day build, 0.6263.1854, which was never released as a download: the <code>wp editloft audit &lt;post_id&gt;</code> command, a 22-test PHPUnit suite that runs in CI, and a calendar feed link signed with HMAC-SHA256. The signing changed the link, so an old feed link stops working. Copy the new one from the Screen Options tab on the calendar page. The feed is off by default.</p></div></li><li class="release"><div class="release__meta"><strong>0.6218.1049</strong>2026-08-06</div><div><h3>Saving from the block editor works again</h3><p>A REST filter registered without declaring its second argument ended every block-editor save in a fatal error. Quick Edit was unaffected, which made the bug look selective. It shipped in two earlier builds, so anyone on 0.6194.1016 or 0.6199.0938 should update.</p></div></li><li class="release"><div class="release__meta"><strong>0.6199.0938</strong>2026-07-18</div><div><h3>Calendar entries show their post type icon</h3><p>The calendar grid now draws the icon each post type registered, so a page, a post and a custom type no longer look alike. Dashicons take the colour of the entry they sit in so they stay readable against every status.</p></div></li></ul>
         <p><a class="btn btn--secondary" href="/changelog/">Full changelog</a></p>
       </div>
     </section>
@@ -455,6 +455,9 @@
             <li><a href="https://github.com/thisismyurl/editloft">GitHub</a></li>
             <li><a href="/privacy/">Privacy</a></li>
             <li><a href="/terms/">Terms</a></li>
+            <li><a href="/accessibility/">Accessibility</a></li>
+            <li><a href="/contact/">Contact</a></li>
+            <li><a href="/newsletter/">Newsletter</a></li>
           </ul>
         </div>
       </div>

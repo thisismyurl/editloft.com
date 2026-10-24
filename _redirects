@@ -20,3 +20,7 @@ https://www.editloft.com/* https://editloft.com/:splat 301!
 /status-transitions /features/status-transitions/ 301
 /status-transitions/ /features/status-transitions/ 301
 /wordpress-editorial-calendar /features/calendar/ 301
+
+# Root-level files the previous version of this site served.
+/og.png /assets/og-image.png 301
+/favicon.svg /assets/favicon.svg 301

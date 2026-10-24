@@ -1,0 +1,33 @@
+/* Newsletter signup form. Inherits each site's fonts and colours; only layout and the
+   accessibility-critical states are set here. */
+.nl-form { max-width: 32rem; }
+/* Honeypot wrapper; belt and braces with the hidden attribute, and works under a strict CSP. */
+.nl-form .nl-hp { display: none !important; }
+.nl-field { margin: 0 0 1rem; }
+.nl-field label { display: block; margin: 0 0 .35rem; font-weight: 600; }
+.nl-field input[type="email"] {
+  width: 100%; box-sizing: border-box; padding: .7rem .8rem; font: inherit;
+  color: inherit; background: transparent; border: 2px solid currentColor; border-radius: .35rem;
+}
+.nl-form input:focus-visible, .nl-form button:focus-visible, .nl-status:focus-visible {
+  outline: 3px solid currentColor; outline-offset: 2px;
+}
+.nl-consent { margin: 1rem 0; font-size: .95em; }
+/* Explicit colours, not currentColor/Canvas: site stylesheets restyle bare <button>, and inherited
+   colours made this button white-on-white on Mining Dispatch. `.nl-form .nl-button` outranks a site's
+   element or single-class button rule. Sites may set --nl-accent on the form (render_form(accent=...));
+   white text needs an accent with at least 4.5:1 contrast against white. */
+.nl-form .nl-button {
+  padding: .75rem 1.5rem; font: inherit; font-weight: 600; cursor: pointer; line-height: 1.2;
+  color: #fff; background: var(--nl-accent, #123456);
+  border: 2px solid var(--nl-accent, #123456); border-radius: .35rem;
+}
+.nl-form .nl-button:hover { filter: brightness(1.15); }
+.nl-form .nl-button:disabled { opacity: .6; cursor: progress; }
+.nl-status { min-height: 1.5em; margin: .75rem 0 0; }
+.nl-status--error { font-weight: 600; }
+.nl-status--error::before { content: "Error: "; }
+
+/* Editloft: the accent comes from the site stylesheet, not an inline style attribute (the Content-Security-Policy
+   blocks inline styles). */
+.nl-form { --nl-accent: var(--color-copper-deep, #8a4a1c); }
